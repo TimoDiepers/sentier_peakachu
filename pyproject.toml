@@ -34,9 +34,9 @@ dependencies = [
 ]
 
 [project.urls]
-source = "https://github.com/TimoDiepers/dds_peakachu"
-homepage = "https://github.com/TimoDiepers/dds_peakachu"
-tracker = "https://github.com/TimoDiepers/dds_peakachu/issues"
+source = "https://github.com/TimoDiepers/sentier_peakachu"
+homepage = "https://github.com/TimoDiepers/sentier_peakachu"
+tracker = "https://github.com/TimoDiepers/sentier_peakachu/issues"
 
 [project.optional-dependencies]
 # Getting recursive dependencies to work is a pain, this

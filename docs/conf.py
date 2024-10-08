@@ -8,7 +8,7 @@ import datetime
 
 ### project information ###########################################################################
 
-project = "dds_peakachu"
+project = "sentier_peakachu"
 author = "Brightway Developers"
 copyright = datetime.date.today().strftime("%Y") + ' Brightway Developers'
 
@@ -51,7 +51,7 @@ intersphinx_mapping = {
 ### theme configuration ############################################################################
 
 html_theme = "sphinx_rtd_theme"
-html_title = "dds_peakachu"
+html_title = "sentier_peakachu"
 html_show_sphinx = False
 
 html_theme_options = {

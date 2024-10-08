@@ -23,7 +23,7 @@ requirements:
                 - python >=3.9
 
 about:
-        home: https://github.com/TimoDiepers/dds_peakachu
+        home: https://github.com/TimoDiepers/sentier_peakachu
         license: BSD-3-Clause
         license_file: LICENSE
 
