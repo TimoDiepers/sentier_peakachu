@@ -23,8 +23,6 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
     'sphinx.ext.napoleon',
-    # theme
-    'sphinx_rtd_theme',
     # Markdown support
     'myst_parser',
     # API documentation support
