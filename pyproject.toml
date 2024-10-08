@@ -3,7 +3,7 @@ requires = ["setuptools>=68.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ddf_peakachu"
+name = "sentier_peakachu"
 authors = [
   { name="Timo Diepers", email="timo.diepers@ltt.rwth-aachen.de" }
 ]
@@ -42,7 +42,7 @@ tracker = "https://github.com/TimoDiepers/sentier_peakachu/issues"
 # Getting recursive dependencies to work is a pain, this
 # seems to work, at least for now
 testing = [
-    "ddf_peakachu",
+    "sentier_peakachu",
     "pytest",
     "pytest-cov",
     "python-coveralls"
@@ -60,13 +60,13 @@ dev = [
 [tool.setuptools]
 license-files = ["LICENSE"]
 include-package-data = true
-packages = ["ddf_peakachu"]
+packages = ["sentier_peakachu"]
 
 [tool.setuptools.dynamic]
-version = {attr = "ddf_peakachu.__version__"}
+version = {attr = "sentier_peakachu.__version__"}
 
 [tool.pytest.ini_options]
-addopts = "--cov ddf_peakachu --cov-report term-missing --verbose"
+addopts = "--cov sentier_peakachu --cov-report term-missing --verbose"
 norecursedirs = [
     "dist",
     "build",

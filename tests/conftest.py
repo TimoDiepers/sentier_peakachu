@@ -1,3 +1,3 @@
-"""Fixtures for ddf_peakachu"""
+"""Fixtures for sentier_peakachu"""
 
 # import pytest

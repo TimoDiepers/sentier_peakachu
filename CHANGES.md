@@ -1,4 +1,4 @@
-# `ddf_peakachu` Changelog
+# `sentier_peakachu` Changelog
 
 All notable changes to this project will be documented in this file.
 

@@ -8,7 +8,7 @@
       "email": "timo.diepers@ltt.rwth-aachen.de",
       "github_username": "TimoDiepers",
       "project_name": "sentier_peakachu",
-      "package_name": "ddf_peakachu",
+      "package_name": "sentier_peakachu",
       "project_short_description": "Modeling electricity stuff",
       "version": "0.1.0",
       "use_pytest": "y",

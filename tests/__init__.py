@@ -1,1 +1,1 @@
-"""Test suite for the ddf_peakachu package."""
+"""Test suite for the sentier_peakachu package."""

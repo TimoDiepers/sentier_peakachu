@@ -104,7 +104,7 @@ autoapi_root = 'content/api'
 autoapi_keep_files = False
 
 autoapi_dirs = [
-    '../ddf_peakachu',
+    '../sentier_peakachu',
 ]
 
 autoapi_ignore = [

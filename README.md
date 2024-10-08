@@ -21,10 +21,10 @@
 
 ## Installation
 
-You can install _ddf_peakachu_ via [pip] from [PyPI]:
+You can install _sentier_peakachu_ via [pip] from [PyPI]:
 
 ```console
-$ pip install ddf_peakachu
+$ pip install sentier_peakachu
 ```
 
 ## Contributing
@@ -35,7 +35,7 @@ To learn more, see the [Contributor Guide][Contributor Guide].
 ## License
 
 Distributed under the terms of the [BSD 3 Clause license][License],
-_ddf_peakachu_ is free and open source software.
+_sentier_peakachu_ is free and open source software.
 
 ## Issues
 

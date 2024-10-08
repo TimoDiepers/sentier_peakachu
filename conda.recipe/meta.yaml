@@ -2,14 +2,14 @@
 # https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#loading-data-from-other-files
 # Original documentation implies that the __init__.py only has one line with __version__
 ---
-{% set version_match = load_file_regex(load_file="ddf_peakachu/__init__.py", 
+{% set version_match = load_file_regex(load_file="sentier_peakachu/__init__.py", 
 regex_pattern='(?:.*)__version__ = "(.+)"') %}
 
 {% set version = version_match[1] %}
 
 
 package:
-        name: ddf_peakachu
+        name: sentier_peakachu
         version: {{ version }}
 
 source:
