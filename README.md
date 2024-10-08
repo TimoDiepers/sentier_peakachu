@@ -15,7 +15,7 @@ This is a repo for the group work at the DdS Autumn School 2024, working on the 
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
 
 [pypi status]: https://pypi.org/project/sentier_peakachu/
-[read the docs]: https://sentier_peakachu.readthedocs.io/
+[read the docs]: https://sentier-peakachu.readthedocs.io/
 [tests]: https://github.com/TimoDiepers/sentier_peakachu/actions?workflow=Tests
 [codecov]: https://app.codecov.io/gh/TimoDiepers/sentier_peakachu
 [pre-commit]: https://github.com/pre-commit/pre-commit
