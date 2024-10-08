@@ -12,10 +12,10 @@ hidden:
 maxdepth: 1
 ---
 self
-content/usage
-content/api/index
-content/codeofconduct
-content/contributing
-content/license
-content/changelog
+Usage <content/usage>
+API Reference<content/api/index>
+Code of Conduct<content/codeofconduct>
+Contributing<content/contributing>
+License<content/license>
+Changelog<content/changelog>
 ```

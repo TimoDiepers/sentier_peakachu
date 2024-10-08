@@ -13,7 +13,7 @@ dependencies:
   # sphinx
   - sphinx # core builder # https://anaconda.org/conda-forge/sphinx/files
   # them
-  - sphinx_rtd_theme # theme # https://anaconda.org/conda-forge/sphinx_rtd_theme/files
+  - pydata-sphinx-theme=0.15.3 # website theme # https://anaconda.org/conda-forge/pydata-sphinx-theme/files
   # extensions
   - myst-parser # Markdown support # https://anaconda.org/conda-forge/myst-parser/files
   - sphinx-design # responsive web component support # https://anaconda.org/conda-forge/sphinx-design/files

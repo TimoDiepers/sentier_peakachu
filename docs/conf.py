@@ -50,7 +50,7 @@ intersphinx_mapping = {
 
 ### theme configuration ############################################################################
 
-html_theme = "sphinx_rtd_theme"
+html_theme = "pydata_sphinx_theme"
 html_title = "sentier_peakachu"
 html_show_sphinx = False
 
@@ -63,7 +63,12 @@ html_theme_options = {
     'sticky_navigation': True,
     'navigation_depth': 4,
     'includehidden': True,
-    'titles_only': False
+    'titles_only': False,
+    "logo": {
+        "text": "sentier_peakachu",
+        "image_light": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/logo/BW_all_black_transparent_landscape.svg",
+        "image_dark": "https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/logo/BW_all_white_transparent_landscape.svg",
+    },
 }
 
 html_logo = 'https://raw.githubusercontent.com/brightway-lca/brightway-documentation/main/source/_static/logo/BW_all_white_transparent_landscape_wide.svg'
