@@ -1,0 +1,24 @@
+{
+  "template": "https://github.com/brightway-lca/cookiecutter-brightwaylib",
+  "commit": "dc0764a425dd99c849c6f749c4a6f07b37f0208c",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Timo Diepers",
+      "email": "timo.diepers@ltt.rwth-aachen.de",
+      "github_username": "TimoDiepers",
+      "project_name": "dds_peakachu",
+      "package_name": "ddf_peakachu",
+      "project_short_description": "Modeling electricity stuff",
+      "version": "0.1.0",
+      "use_pytest": "y",
+      "open_source_license": "BSD-3-Clause",
+      "copyright_year": "2024",
+      "_copy_without_render": [
+        ".github/*"
+      ],
+      "_template": "https://github.com/brightway-lca/cookiecutter-brightwaylib"
+    }
+  },
+  "directory": null
+}
