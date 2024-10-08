@@ -5,7 +5,7 @@ This is a repo for the group work at the DdS Autumn School 2024, working on the 
 [![PyPI](https://img.shields.io/pypi/v/sentier_peakachu.svg)][pypi status]
 [![Status](https://img.shields.io/pypi/status/sentier_peakachu.svg)][pypi status]
 [![Python Version](https://img.shields.io/pypi/pyversions/sentier_peakachu)][pypi status]
-[![License](https://img.shields.io/pypi/l/sentier_peakachu)][license]
+[![License](https://img.shields.io/pypi/l/sentier-peakachu)][license]
 
 [![Read the documentation at https://sentier-peakachu.readthedocs.io/](https://img.shields.io/readthedocs/sentier_peakachu/latest.svg?label=Read%20the%20Docs)][read the docs]
 [![Tests](https://github.com/TimoDiepers/sentier_peakachu/actions/workflows/python-test.yml/badge.svg)][tests]
@@ -14,7 +14,7 @@ This is a repo for the group work at the DdS Autumn School 2024, working on the 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
 
-[pypi status]: https://pypi.org/project/sentier_peakachu/
+[pypi status]: https://pypi.org/project/sentier.peakachu/
 [read the docs]: https://sentier-peakachu.readthedocs.io/
 [tests]: https://github.com/TimoDiepers/sentier_peakachu/actions?workflow=Tests
 [codecov]: https://app.codecov.io/gh/TimoDiepers/sentier_peakachu
