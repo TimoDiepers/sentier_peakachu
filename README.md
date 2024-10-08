@@ -1,5 +1,7 @@
 # sentier_peakachu
 
+This is a repo for the group work at the DdS Autumn School 2024, working on the integration of electricity markets.
+
 [![PyPI](https://img.shields.io/pypi/v/sentier_peakachu.svg)][pypi status]
 [![Status](https://img.shields.io/pypi/status/sentier_peakachu.svg)][pypi status]
 [![Python Version](https://img.shields.io/pypi/pyversions/sentier_peakachu)][pypi status]
