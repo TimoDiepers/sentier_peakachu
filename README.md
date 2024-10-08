@@ -7,7 +7,7 @@ This is a repo for the group work at the DdS Autumn School 2024, working on the 
 [![Python Version](https://img.shields.io/pypi/pyversions/sentier_peakachu)][pypi status]
 [![License](https://img.shields.io/pypi/l/sentier_peakachu)][license]
 
-[![Read the documentation at https://sentier_peakachu.readthedocs.io/](https://img.shields.io/readthedocs/sentier_peakachu/latest.svg?label=Read%20the%20Docs)][read the docs]
+[![Read the documentation at https://sentier-peakachu.readthedocs.io/](https://img.shields.io/readthedocs/sentier_peakachu/latest.svg?label=Read%20the%20Docs)][read the docs]
 [![Tests](https://github.com/TimoDiepers/sentier_peakachu/actions/workflows/python-test.yml/badge.svg)][tests]
 [![Codecov](https://codecov.io/gh/TimoDiepers/sentier_peakachu/branch/main/graph/badge.svg)][codecov]
 
