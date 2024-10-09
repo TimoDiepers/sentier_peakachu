@@ -1,10 +1,4 @@
-from sentier_data_tools import (
-    Dataset,
-    Demand,
-    Flow,
-    ProductIRI,
-    SentierModel,
-)
+from sentier_data_tools import Dataset, Demand, Flow, ProductIRI, SentierModel
 
 
 class ElectricityModel(SentierModel):
@@ -13,7 +7,7 @@ class ElectricityModel(SentierModel):
             "http://openenergy-platform.org/ontology/oeo/OEO_00000139"
         ): "electricity"
     }
-    needs = {}
+    aliases = {}
 
     def run(self, abbreviate_iris: bool = True) -> tuple[list[Demand], list[Flow]]:
         self.prepare()
