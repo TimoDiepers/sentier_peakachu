@@ -60,6 +60,8 @@ jobs:
           pip install .[testing] # install the package and the testing deps
 
       - name: Test with pytest
+        env:
+          ENTSOE_API_KEY: ${{ secrets.ENTSOE_API_KEY }}
         run: |
           pytest
 
