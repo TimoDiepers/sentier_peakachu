@@ -2,7 +2,6 @@ from datetime import datetime
 
 import pandas as pd
 import sentier_data_tools as sdt
-from loguru import logger
 
 from sentier_peakachu.entsoe import get_generation_data
 
@@ -10,13 +9,11 @@ from sentier_peakachu.entsoe import get_generation_data
 def create_local_datastorage(reset: bool = True):
     if reset:
         sdt.reset_local_database()
-    create_market_datapackage()
-    create_powerplant_datapackage()
-    
-def create_market_datapackage():
-    metadata_markets = sdt.Datapackage(
+
+    # DF1
+    metadata = sdt.Datapackage(
         name="electricity_markets",
-        description="Electricity markets blabla",
+        description="Electricity markets data from ENTSO-E",
         contributors=[
             {
                 "title": "Peakachu",
@@ -26,32 +23,45 @@ def create_market_datapackage():
         ],
         homepage="https://github.com/TimoDiepers/sentier_peakachu/",
     ).metadata()
-    
+
+    country_code = "PL"
     df = get_generation_data(
-        country_code=COUNTRY,
+        country_code=country_code,
         start=pd.Timestamp("20241008", tz="Europe/Brussels"),
         end=pd.Timestamp("20241009", tz="Europe/Brussels"),
     )
     df.index.name = "timestamp"
     df = df[["Fossil Brown coal/Lignite", "Fossil Gas", "Solar"]].reset_index()
-    df.columns = ["timestamp", "https://example.com/coal", "https://example.com/gas", "https://example.com/pv"]
-    
+    df.columns = [
+        "https://example.com/timestamp",
+        "https://example.com/coal",
+        "https://example.com/gas",
+        "https://example.com/pv",
+    ]
+
+    UNITS = [
+        "https://example.com/units/datetime",
+        "https://example.com/units/MW",
+        "https://example.com/units/MW",
+        "https://example.com/units/MW",
+    ]
+
     sdt.Dataset(
-        name=f"electricity mixes",
-        data=df,
+        name="electricity mixes",
+        dataframe=df,
         kind=sdt.DatasetKind.BOM,
         product="http://openenergy-platform.org/ontology/oeo/OEO_00000139",
-        columns=[{"iri": x, "unit": y} for x, y in zip(df.columns, UNITS_MARKETS)],
-        metadata=metadata_markets,
-        location=f"https://example.com/locations/{COUNTRY}",
+        columns=[{"iri": x, "unit": y} for x, y in zip(df.columns, UNITS)],
+        metadata=metadata,
+        location=f"https://example.com/locations/{country_code}",
         version=1,
         valid_from=datetime(2018, 1, 1),
         valid_to=datetime(2028, 1, 1),
     ).save()
-    
-def create_powerplant_datapackage():
-    metadata_coal_power_plants = sdt.Datapackage(
-        name="emission data coal power plants",
+
+    # DF2
+    metadata = sdt.Datapackage(
+        name="emission data power plants",
         description="Climate trace emission data for power plants",
         contributors=[
             {
@@ -68,31 +78,60 @@ def create_powerplant_datapackage():
         homepage="https://example.com/additional_inventories",
     ).metadata()
 
-    df = create_powerplant_dummy()
-    df['total_production_at_timestamp'] = df.groupby('timestamp')["https://example.com/Energy"].transform('sum')
-    df['EF'] = df["https://example.com/GWP100"]/ df['total_production_at_timestamp']
-    dataset_id = sdt.Dataset(
-        name=f"power plant data",
-        data=df,
-        kind=sdt.DatasetKind.BOM,
-        product="http://openenergy-platform.org/ontology/oeo/OEO_00000139",
-        columns=[{"iri": x, "unit": y} for x, y in zip(df.columns, UNITS_COAL_PP)],
-        metadata=metadata_coal_power_plants,
-        location=f"https://example.com/locations/{COUNTRY}",
-        version=1,
-        valid_from=datetime(2018, 1, 1),
-        valid_to=datetime(2028, 1, 1),
-    ).save()
+    UNITS_POWERPLANTS = [
+        "https://example.com/units/datetime",
+        "https://example.com/units/datetime",
+        "https://example.com/units/plant_name",
+        "https://example.com/units/MWh",
+        "https://example.com/units/ttCO2eq",
+        "https://example.com/units/tCO2eqPerMWh",
+    ]
+    COLUMNS_POWERPLANTS = [
+        "https://example.com/identifier",
+        "https://example.com/name",
+        "https://example.com/units/start_time",
+        "https://example.com/units/end_time",
+        "https://example.com/powergeneration",
+        "https://example.com/emissions",
+    ]
 
-def create_powerplant_dummy():
-    columns = ["timestamp", "powerplant_name", "https://example.com/Energy", "https://example.com/GWP100"]
-    timestamp = [datetime(2020, 1, 1, 0, 0, 0), datetime(2020, 1, 1, 0, 0, 0), datetime(2020, 1, 1, 0, 0, 0), datetime(2021, 1, 1, 0, 0, 0), datetime(2021, 1, 1, 0, 0, 0), datetime(2021, 1, 1, 0, 0, 0)]
+    def get_country_iri(country):
+        return f"https://example.com/locations/{country}"
 
-    powerplant_name = ["coal plant 1", "coal plant 2", "coal plant 3", "coal plant 1", "coal plant 2", "coal plant 3"] 
-    production_vol = [100, 200, 300, 80, 210, 270]
-    GWP = [50, 100, 150, 40, 110, 140]
-    return pd.DataFrame(list(zip(timestamp, powerplant_name, production_vol, GWP)), columns=columns)
+    def get_electricity_iri(source_type):
+        return f"https://example.com/electricity_from_{source_type[:3]}"
 
-UNITS_MARKETS = ["https://example.com/units/datetime", "https://example.com/units/MW", "https://example.com/units/MW", "https://example.com/units/MW"]
-UNITS_COAL_PP = ["https://example.com/units/datetime", "https://example.com/units/plant_name", "https://example.com/units/MWh", "https://example.com/units/MtCO2eq", "https://example.com/units/MtCO2eq/MWh"]
-COUNTRY = "PL"
+    trace_frame = pd.read_csv("../data/electricity-generation_emissions_sources.csv")
+
+    filtered_df = trace_frame[trace_frame["gas"] == "co2e_100yr"]
+    grouped_dfs = dict(filtered_df.groupby(["iso3_country", "source_type"]))
+
+    for (country, source_type), df in grouped_dfs.items():
+        filtered_df = df[
+            [
+                "source_id",
+                "source_name",
+                "start_time",
+                "end_time",
+                "activity",
+                "emissions_quantity",
+            ]
+        ]
+        filtered_df.columns = COLUMNS_POWERPLANTS
+        valid_from_str = min(df["start_time"])
+        valid_to_str = max(df["end_time"])
+
+        sdt.Dataset(
+            name=f"power plant data, {country}, {source_type}",
+            dataframe=filtered_df,
+            kind=sdt.DatasetKind.BOM,
+            product=get_electricity_iri(source_type),
+            columns=[
+                {"iri": x, "unit": y} for x, y in zip(df.columns, UNITS_POWERPLANTS)
+            ],
+            metadata=metadata,
+            location=get_country_iri(country),
+            version=1,
+            valid_from=datetime.strptime(valid_from_str, "%Y-%m-%d %H:%M:%S"),
+            valid_to=datetime.strptime(valid_to_str, "%Y-%m-%d %H:%M:%S"),
+        ).save()
