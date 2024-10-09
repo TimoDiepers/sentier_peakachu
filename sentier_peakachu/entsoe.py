@@ -19,6 +19,9 @@ def filter_actual_aggregated(df):
     Curates the generation data from ENTSO-E API to only include the actual aggregated generation
     data.
     """
+    if df.columns.nlevels == 1: # sometimes, consumption data is not available
+        return df
+    
     df_filtered = df.loc[:, df.columns.get_level_values(1) == "Actual Aggregated"]
     df_filtered.columns = df_filtered.columns.droplevel(1)
     return df_filtered
