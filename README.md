@@ -19,7 +19,6 @@
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
 
-
 This is a repo for the group work at the DdS Autumn School 2024, working on the integration of electricity markets.
 
 ## Installation
@@ -45,14 +44,12 @@ _sentier_peakachu_ is free and open source software.
 If you encounter any problems,
 please [file an issue][Issue Tracker] along with a detailed description.
 
-
 <!-- github-only -->
 
 [command-line reference]: https://sentier_peakachu.readthedocs.io/en/latest/usage.html
 [License]: https://github.com/TimoDiepers/sentier_peakachu/blob/main/LICENSE
 [Contributor Guide]: https://github.com/TimoDiepers/sentier_peakachu/blob/main/CONTRIBUTING.md
 [Issue Tracker]: https://github.com/TimoDiepers/sentier_peakachu/issues
-
 
 ## Building the Documentation
 
