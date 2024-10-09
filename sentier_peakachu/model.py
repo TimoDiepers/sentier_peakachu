@@ -1,11 +1,19 @@
-from sentier_data_tools.common import Demand, Flow, SentierModel
-from sentier_data_tools.iri import FlowIRI, GeonamesIRI, ProductIRI
-from sentier_data_tools.logs import stdout_feedback_logger
+from sentier_data_tools import (
+    Dataset,
+    Demand,
+    Flow,
+    ProductIRI,
+    SentierModel,
+)
 
 
 class ElectricityModel(SentierModel):
-    provides = ["http://openenergy-platform.org/ontology/oeo/OEO_00000139"]
-    needs = []
+    provides = {
+        ProductIRI(
+            "http://openenergy-platform.org/ontology/oeo/OEO_00000139"
+        ): "electricity"
+    }
+    needs = {}
 
     def run(self, abbreviate_iris: bool = True) -> tuple[list[Demand], list[Flow]]:
         self.prepare()
@@ -14,3 +22,12 @@ class ElectricityModel(SentierModel):
         self.get_model_data()
         self.data_validity_checks()
         self.resample()
+
+    def get_generation_mix(self) -> list[Dataset]:
+        datasets = list(
+            Dataset.select().where(
+                (Dataset.product == self.demand.product_iri)
+                & (Dataset.location == self.demand.spatial_context)
+            )
+        )
+        return self.merge_datasets_to_dataframes(datasets)
