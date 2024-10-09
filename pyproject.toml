@@ -33,7 +33,7 @@ dependencies = [
     # You can add version requirements like "foo>2.0"
     "python-dotenv",
     "entsoe-py",
-    "sentier_data_tools>=0.4.2",
+    "sentier-data-tools",
     "loguru",
 ]
 
