@@ -1,0 +1,326 @@
+﻿description;region_code;flow_code;id;unit;emission factor;direct emission factor;indirect emission factor
+Production of electricity by coal;AT;A_POWC;32552;kg CO2/kWh;0.762699012;0.757;0.005699012
+Production of electricity by coal;AU;A_POWC;32553;kg CO2/kWh;1.018944827;0.999;0.019944827
+Production of electricity by coal;BE;A_POWC;32554;kg CO2/kWh;0.94384013;0.928;0.01584013
+Production of electricity by coal;BG;A_POWC;32555;kg CO2/kWh;1.107036862;1.09;0.017036862
+Production of electricity by coal;BR;A_POWC;32556;kg CO2/kWh;1.03472133;1.03;0.00472133
+Production of electricity by coal;CA;A_POWC;32557;kg CO2/kWh;0.958489723;0.95;0.008489723
+Production of electricity by coal;CN;A_POWC;32558;kg CO2/kWh;0.943551811;0.868;0.075551811
+Production of electricity by coal;CZ;A_POWC;32559;kg CO2/kWh;1.077513436;1.03;0.047513436
+Production of electricity by coal;DE;A_POWC;32560;kg CO2/kWh;0.910093074;0.893;0.017093074
+Production of electricity by coal;EE;A_POWC;32561;kg CO2/kWh;0.773849259;0.745;0.028849259
+Production of electricity by coal;ES;A_POWC;32562;kg CO2/kWh;0.92340758;0.915;0.00840758
+Production of electricity by coal;FI;A_POWC;32563;kg CO2/kWh;0.871470761;0.868;0.003470761
+Production of electricity by coal;FR;A_POWC;32564;kg CO2/kWh;0.931727732;0.925;0.006727732
+Production of electricity by coal;GB;A_POWC;32565;kg CO2/kWh;0.905104049;0.894;0.011104049
+Production of electricity by coal;GR;A_POWC;32566;kg CO2/kWh;1.004612496;1;0.004612496
+Production of electricity by coal;HR;A_POWC;32567;kg CO2/kWh;0.914923887;0.896;0.018923887
+Production of electricity by coal;HU;A_POWC;32568;kg CO2/kWh;1.079169907;1.07;0.009169907
+Production of electricity by coal;ID;A_POWC;32569;kg CO2/kWh;1.025913765;1.01;0.015913765
+Production of electricity by coal;IE;A_POWC;32570;kg CO2/kWh;0.962785846;0.954;0.008785846
+Production of electricity by coal;IN;A_POWC;32571;kg CO2/kWh;0.977635691;0.925;0.052635691
+Production of electricity by coal;IT;A_POWC;32572;kg CO2/kWh;0.909587214;0.897;0.012587214
+Production of electricity by coal;JP;A_POWC;32573;kg CO2/kWh;0.838785342;0.821;0.017785342
+Production of electricity by coal;KR;A_POWC;32574;kg CO2/kWh;0.943312481;0.905;0.038312481
+Production of electricity by coal;MX;A_POWC;32575;kg CO2/kWh;1.08525548;1.06;0.02525548
+Production of electricity by coal;NL;A_POWC;32576;kg CO2/kWh;0.79454327;0.788;0.00654327
+Production of electricity by coal;PL;A_POWC;32577;kg CO2/kWh;0.873474088;0.853;0.020474088
+Production of electricity by coal;PT;A_POWC;32578;kg CO2/kWh;0.898205281;0.892;0.006205281
+Production of electricity by coal;RO;A_POWC;32579;kg CO2/kWh;1.158311386;1.08;0.078311386
+Production of electricity by coal;TR;A_POWC;32580;kg CO2/kWh;0.992003896;0.959;0.033003896
+Production of electricity by coal;US;A_POWC;32581;kg CO2/kWh;0.947672281;0.942;0.005672281
+Production of electricity by coal;WA;A_POWC;32582;kg CO2/kWh;1.027983686;0.984;0.043983686
+Production of electricity by coal;WE;A_POWC;32583;kg CO2/kWh;1.233081183;1.06;0.173081183
+Production of electricity by coal;WF;A_POWC;32584;kg CO2/kWh;1.193203962;1.17;0.023203962
+Production of electricity by coal;WL;A_POWC;32585;kg CO2/kWh;0.970255417;0.963;0.007255417
+Production of electricity by coal;WM;A_POWC;32586;kg CO2/kWh;0.921849737;0.893;0.028849737
+Production of electricity by coal;ZA;A_POWC;32587;kg CO2/kWh;1.063874739;1.05;0.013874739
+Production of electricity by gas;AT;A_POWG;32590;kg CO2/kWh;0.444854586;0.432;0.012854586
+Production of electricity by gas;AU;A_POWG;32591;kg CO2/kWh;0.640199489;0.596;0.044199489
+Production of electricity by gas;BE;A_POWG;32592;kg CO2/kWh;0.417310401;0.402;0.015310401
+Production of electricity by gas;BG;A_POWG;32593;kg CO2/kWh;1.107999994;1.08;0.027999994
+Production of electricity by gas;BR;A_POWG;32594;kg CO2/kWh;0.49651037;0.47;0.02651037
+Production of electricity by gas;CA;A_POWG;32595;kg CO2/kWh;0.640985416;0.606;0.034985416
+Production of electricity by gas;CN;A_POWG;32596;kg CO2/kWh;0.543645044;0.473;0.070645044
+Production of electricity by gas;CZ;A_POWG;32597;kg CO2/kWh;0.422977299;0.387;0.035977299
+Production of electricity by gas;DE;A_POWG;32598;kg CO2/kWh;0.449603049;0.42;0.029603049
+Production of electricity by gas;EE;A_POWG;32599;kg CO2/kWh;0.335417754;0.23;0.105417754
+Production of electricity by gas;ES;A_POWG;32600;kg CO2/kWh;0.435275392;0.427;0.008275392
+Production of electricity by gas;FI;A_POWG;32601;kg CO2/kWh;0.536466464;0.532;0.004466464
+Production of electricity by gas;FR;A_POWG;32602;kg CO2/kWh;0.395766871;0.382;0.013766871
+Production of electricity by gas;GB;A_POWG;32603;kg CO2/kWh;0.441701721;0.388;0.053701721
+Production of electricity by gas;GR;A_POWG;32604;kg CO2/kWh;0.399427657;0.369;0.030427657
+Production of electricity by gas;HR;A_POWG;32605;kg CO2/kWh;0.481293753;0.452;0.029293753
+Production of electricity by gas;HU;A_POWG;32606;kg CO2/kWh;0.411283613;0.402;0.009283613
+Production of electricity by gas;ID;A_POWG;32607;kg CO2/kWh;0.574216431;0.541;0.033216431
+Production of electricity by gas;IE;A_POWG;32608;kg CO2/kWh;0.392966307;0.367;0.025966307
+Production of electricity by gas;IN;A_POWG;32609;kg CO2/kWh;0.609720355;0.506;0.103720355
+Production of electricity by gas;IT;A_POWG;32610;kg CO2/kWh;0.409238271;0.381;0.028238271
+Production of electricity by gas;JP;A_POWG;32611;kg CO2/kWh;0.446337827;0.418;0.028337827
+Production of electricity by gas;KR;A_POWG;32612;kg CO2/kWh;0.45887794;0.397;0.06187794
+Production of electricity by gas;LU;A_POWG;32613;kg CO2/kWh;5.944285997;5.93;0.014285997
+Production of electricity by gas;MX;A_POWG;32614;kg CO2/kWh;0.468181855;0.448;0.020181855
+Production of electricity by gas;NL;A_POWG;32615;kg CO2/kWh;0.387734562;0.369;0.018734562
+Production of electricity by gas;NO;A_POWG;32616;kg CO2/kWh;0.58171943;0.552;0.02971943
+Production of electricity by gas;PT;A_POWG;32617;kg CO2/kWh;0.395744284;0.372;0.023744284
+Production of electricity by gas;RO;A_POWG;32618;kg CO2/kWh;0.441255406;0.409;0.032255406
+Production of electricity by gas;RU;A_POWG;32619;kg CO2/kWh;1.183914001;1.15;0.033914001
+Production of electricity by gas;SI;A_POWG;32620;kg CO2/kWh;0.869548362;0.859;0.010548362
+Production of electricity by gas;SK;A_POWG;32621;kg CO2/kWh;0.513138651;0.509;0.004138651
+Production of electricity by gas;TR;A_POWG;32622;kg CO2/kWh;0.481666151;0.395;0.086666151
+Production of electricity by gas;US;A_POWG;32623;kg CO2/kWh;0.462217051;0.436;0.026217051
+Production of electricity by gas;WA;A_POWG;32624;kg CO2/kWh;0.542036622;0.49;0.052036622
+Production of electricity by gas;WE;A_POWG;32625;kg CO2/kWh;0.584520086;0.508;0.076520086
+Production of electricity by gas;WF;A_POWG;32626;kg CO2/kWh;0.543835796;0.496;0.047835796
+Production of electricity by gas;WL;A_POWG;32627;kg CO2/kWh;0.592558312;0.533;0.059558312
+Production of electricity by gas;WM;A_POWG;32628;kg CO2/kWh;0.604997995;0.569;0.035997995
+Production of electricity by nuclear;BE;A_POWN;32630;kg CO2/kWh;0.043812013;0;0.043812013
+Production of electricity by nuclear;BG;A_POWN;32631;kg CO2/kWh;0.005970679;0;0.005970679
+Production of electricity by nuclear;BR;A_POWN;32632;kg CO2/kWh;0.009492558;0;0.009492558
+Production of electricity by nuclear;CA;A_POWN;32633;kg CO2/kWh;0.027016042;0;0.027016042
+Production of electricity by nuclear;CH;A_POWN;32634;kg CO2/kWh;0.048469454;0;0.048469454
+Production of electricity by nuclear;CN;A_POWN;32635;kg CO2/kWh;0.093133699;0;0.093133699
+Production of electricity by nuclear;CZ;A_POWN;32636;kg CO2/kWh;0.493531593;0;0.493531593
+Production of electricity by nuclear;DE;A_POWN;32637;kg CO2/kWh;0.003956053;0;0.003956053
+Production of electricity by nuclear;ES;A_POWN;32638;kg CO2/kWh;0.004336891;0;0.004336891
+Production of electricity by nuclear;FI;A_POWN;32639;kg CO2/kWh;0.01456048;0;0.01456048
+Production of electricity by nuclear;FR;A_POWN;32640;kg CO2/kWh;0.024323973;0;0.024323973
+Production of electricity by nuclear;GB;A_POWN;32641;kg CO2/kWh;1.24963815;0;1.24963815
+Production of electricity by nuclear;IN;A_POWN;32642;kg CO2/kWh;2.542097063;0;2.542097063
+Production of electricity by nuclear;JP;A_POWN;32643;kg CO2/kWh;0.010469915;0;0.010469915
+Production of electricity by nuclear;KR;A_POWN;32644;kg CO2/kWh;0.034460715;0;0.034460715
+Production of electricity by nuclear;MX;A_POWN;32645;kg CO2/kWh;0.489038785;0;0.489038785
+Production of electricity by nuclear;NL;A_POWN;32646;kg CO2/kWh;4.394332251;0;4.394332251
+Production of electricity by nuclear;RO;A_POWN;32647;kg CO2/kWh;0.010156633;0;0.010156633
+Production of electricity by nuclear;RU;A_POWN;32648;kg CO2/kWh;0.021797357;0;0.021797357
+Production of electricity by nuclear;SE;A_POWN;32649;kg CO2/kWh;0.014656106;0;0.014656106
+Production of electricity by nuclear;SI;A_POWN;32650;kg CO2/kWh;4.258324137;0;4.258324137
+Production of electricity by nuclear;SK;A_POWN;32651;kg CO2/kWh;0.00820278;0;0.00820278
+Production of electricity by nuclear;US;A_POWN;32652;kg CO2/kWh;0.004480674;0;0.004480674
+Production of electricity by nuclear;WA;A_POWN;32653;kg CO2/kWh;0.761086256;0;0.761086256
+Production of electricity by nuclear;WE;A_POWN;32654;kg CO2/kWh;6.833062861;0;6.833062861
+Production of electricity by nuclear;WL;A_POWN;32655;kg CO2/kWh;0.210016049;0;0.210016049
+Production of electricity by nuclear;WM;A_POWN;32656;kg CO2/kWh;0.074002655;0;0.074002655
+Production of electricity by nuclear;ZA;A_POWN;32657;kg CO2/kWh;0.744952922;0;0.744952922
+Production of electricity by hydro;AT;A_POWH;32659;kg CO2/kWh;0.008009183;0;0.008009183
+Production of electricity by hydro;AU;A_POWH;32660;kg CO2/kWh;0.019249828;0;0.019249828
+Production of electricity by hydro;BE;A_POWH;32661;kg CO2/kWh;0.07193418;0;0.07193418
+Production of electricity by hydro;BG;A_POWH;32662;kg CO2/kWh;0.022861167;0;0.022861167
+Production of electricity by hydro;BR;A_POWH;32663;kg CO2/kWh;0.008491735;0;0.008491735
+Production of electricity by hydro;CA;A_POWH;32664;kg CO2/kWh;0.011485069;0;0.011485069
+Production of electricity by hydro;CH;A_POWH;32665;kg CO2/kWh;0.02601536;0;0.02601536
+Production of electricity by hydro;CN;A_POWH;32666;kg CO2/kWh;0.109269702;0;0.109269702
+Production of electricity by hydro;CZ;A_POWH;32667;kg CO2/kWh;0.061560144;0;0.061560144
+Production of electricity by hydro;DE;A_POWH;32668;kg CO2/kWh;0.021850453;0;0.021850453
+Production of electricity by hydro;DK;A_POWH;32669;kg CO2/kWh;0.018046867;0;0.018046867
+Production of electricity by hydro;EE;A_POWH;32670;kg CO2/kWh;0.020562079;0;0.020562079
+Production of electricity by hydro;ES;A_POWH;32671;kg CO2/kWh;0.019938042;0;0.019938042
+Production of electricity by hydro;FI;A_POWH;32672;kg CO2/kWh;0.010165684;0;0.010165684
+Production of electricity by hydro;FR;A_POWH;32673;kg CO2/kWh;0.018805113;0;0.018805113
+Production of electricity by hydro;GB;A_POWH;32674;kg CO2/kWh;0.049199648;0;0.049199648
+Production of electricity by hydro;GR;A_POWH;32675;kg CO2/kWh;0.007205183;0;0.007205183
+Production of electricity by hydro;HR;A_POWH;32676;kg CO2/kWh;0.01582632;0;0.01582632
+Production of electricity by hydro;HU;A_POWH;32677;kg CO2/kWh;0.030762583;0;0.030762583
+Production of electricity by hydro;ID;A_POWH;32678;kg CO2/kWh;0.011319677;0;0.011319677
+Production of electricity by hydro;IE;A_POWH;32679;kg CO2/kWh;0.028053701;0;0.028053701
+Production of electricity by hydro;IN;A_POWH;32680;kg CO2/kWh;0.053985606;0;0.053985606
+Production of electricity by hydro;IT;A_POWH;32681;kg CO2/kWh;0.028793556;0;0.028793556
+Production of electricity by hydro;JP;A_POWH;32682;kg CO2/kWh;0.012737354;0;0.012737354
+Production of electricity by hydro;KR;A_POWH;32683;kg CO2/kWh;0.130796527;0;0.130796527
+Production of electricity by hydro;LT;A_POWH;32684;kg CO2/kWh;0.0380026;0;0.0380026
+Production of electricity by hydro;LU;A_POWH;32685;kg CO2/kWh;0.580390505;0;0.580390505
+Production of electricity by hydro;LV;A_POWH;32686;kg CO2/kWh;0.058211238;0;0.058211238
+Production of electricity by hydro;MX;A_POWH;32687;kg CO2/kWh;0.002023345;0;0.002023345
+Production of electricity by hydro;NL;A_POWH;32688;kg CO2/kWh;0.035561307;0;0.035561307
+Production of electricity by hydro;NO;A_POWH;32689;kg CO2/kWh;0.009702695;0;0.009702695
+Production of electricity by hydro;PL;A_POWH;32690;kg CO2/kWh;0.076224493;0;0.076224493
+Production of electricity by hydro;PT;A_POWH;32691;kg CO2/kWh;0.01534689;0;0.01534689
+Production of electricity by hydro;RO;A_POWH;32692;kg CO2/kWh;0.016473348;0;0.016473348
+Production of electricity by hydro;RU;A_POWH;32693;kg CO2/kWh;0.02114541;0;0.02114541
+Production of electricity by hydro;SE;A_POWH;32694;kg CO2/kWh;0.005426836;0;0.005426836
+Production of electricity by hydro;SI;A_POWH;32695;kg CO2/kWh;0.084667128;0;0.084667128
+Production of electricity by hydro;SK;A_POWH;32696;kg CO2/kWh;0.008865407;0;0.008865407
+Production of electricity by hydro;TR;A_POWH;32697;kg CO2/kWh;0.045268089;0;0.045268089
+Production of electricity by hydro;US;A_POWH;32698;kg CO2/kWh;0.010318084;0;0.010318084
+Production of electricity by hydro;WA;A_POWH;32699;kg CO2/kWh;0.084310719;0;0.084310719
+Production of electricity by hydro;WE;A_POWH;32700;kg CO2/kWh;0.059161978;0;0.059161978
+Production of electricity by hydro;WF;A_POWH;32701;kg CO2/kWh;0.055580114;0;0.055580114
+Production of electricity by hydro;WL;A_POWH;32702;kg CO2/kWh;0.027779042;0;0.027779042
+Production of electricity by hydro;WM;A_POWH;32703;kg CO2/kWh;0.076267513;0;0.076267513
+Production of electricity by hydro;ZA;A_POWH;32704;kg CO2/kWh;0.038677859;0;0.038677859
+Production of electricity by wind;AT;A_POWW;32705;kg CO2/kWh;0.004629889;0;0.004629889
+Production of electricity by wind;AU;A_POWW;32706;kg CO2/kWh;0.010472841;0;0.010472841
+Production of electricity by wind;BE;A_POWW;32707;kg CO2/kWh;0.007341392;0;0.007341392
+Production of electricity by wind;BG;A_POWW;32708;kg CO2/kWh;0.002261794;0;0.002261794
+Production of electricity by wind;BR;A_POWW;32709;kg CO2/kWh;0.004001741;0;0.004001741
+Production of electricity by wind;CA;A_POWW;32710;kg CO2/kWh;0.007595424;0;0.007595424
+Production of electricity by wind;CH;A_POWW;32711;kg CO2/kWh;0.013623485;0;0.013623485
+Production of electricity by wind;CN;A_POWW;32712;kg CO2/kWh;0.098291497;0;0.098291497
+Production of electricity by wind;CZ;A_POWW;32713;kg CO2/kWh;0.012931726;0;0.012931726
+Production of electricity by wind;DE;A_POWW;32714;kg CO2/kWh;0.008759286;0;0.008759286
+Production of electricity by wind;DK;A_POWW;32715;kg CO2/kWh;0.007337764;0;0.007337764
+Production of electricity by wind;EE;A_POWW;32716;kg CO2/kWh;0.009785295;0;0.009785295
+Production of electricity by wind;ES;A_POWW;32717;kg CO2/kWh;0.013887679;0;0.013887679
+Production of electricity by wind;FI;A_POWW;32718;kg CO2/kWh;0.006491977;0;0.006491977
+Production of electricity by wind;FR;A_POWW;32719;kg CO2/kWh;0.011628178;0;0.011628178
+Production of electricity by wind;GB;A_POWW;32720;kg CO2/kWh;0.006673884;0;0.006673884
+Production of electricity by wind;GR;A_POWW;32721;kg CO2/kWh;0.006272769;0;0.006272769
+Production of electricity by wind;HR;A_POWW;32722;kg CO2/kWh;0.024306789;0;0.024306789
+Production of electricity by wind;HU;A_POWW;32723;kg CO2/kWh;0.012749714;0;0.012749714
+Production of electricity by wind;IE;A_POWW;32724;kg CO2/kWh;0.019213862;0;0.019213862
+Production of electricity by wind;IN;A_POWW;32725;kg CO2/kWh;0.045928745;0;0.045928745
+Production of electricity by wind;IT;A_POWW;32726;kg CO2/kWh;0.010089017;0;0.010089017
+Production of electricity by wind;JP;A_POWW;32727;kg CO2/kWh;0.006173659;0;0.006173659
+Production of electricity by wind;KR;A_POWW;32728;kg CO2/kWh;0.032396802;0;0.032396802
+Production of electricity by wind;LT;A_POWW;32729;kg CO2/kWh;0.010659537;0;0.010659537
+Production of electricity by wind;LU;A_POWW;32730;kg CO2/kWh;0.032438679;0;0.032438679
+Production of electricity by wind;LV;A_POWW;32731;kg CO2/kWh;0.039600688;0;0.039600688
+Production of electricity by wind;MX;A_POWW;32732;kg CO2/kWh;0.000809008;0;0.000809008
+Production of electricity by wind;NL;A_POWW;32733;kg CO2/kWh;0.008397323;0;0.008397323
+Production of electricity by wind;NO;A_POWW;32734;kg CO2/kWh;0.008413379;0;0.008413379
+Production of electricity by wind;PL;A_POWW;32735;kg CO2/kWh;0.016182925;0;0.016182925
+Production of electricity by wind;PT;A_POWW;32736;kg CO2/kWh;0.010455059;0;0.010455059
+Production of electricity by wind;RO;A_POWW;32737;kg CO2/kWh;0.008129841;0;0.008129841
+Production of electricity by wind;RU;A_POWW;32738;kg CO2/kWh;0.002646594;0;0.002646594
+Production of electricity by wind;SE;A_POWW;32739;kg CO2/kWh;0.003715241;0;0.003715241
+Production of electricity by wind;SK;A_POWW;32740;kg CO2/kWh;0.014698173;0;0.014698173
+Production of electricity by wind;TR;A_POWW;32741;kg CO2/kWh;0.039476796;0;0.039476796
+Production of electricity by wind;US;A_POWW;32742;kg CO2/kWh;0.004716635;0;0.004716635
+Production of electricity by wind;WA;A_POWW;32743;kg CO2/kWh;0.146974513;0;0.146974513
+Production of electricity by wind;WE;A_POWW;32744;kg CO2/kWh;0.082916164;0;0.082916164
+Production of electricity by wind;WF;A_POWW;32745;kg CO2/kWh;0.070270583;0;0.070270583
+Production of electricity by wind;WL;A_POWW;32746;kg CO2/kWh;0.027641809;0;0.027641809
+Production of electricity by wind;WM;A_POWW;32747;kg CO2/kWh;0.118975949;0;0.118975949
+Production of electricity by wind;ZA;A_POWW;32748;kg CO2/kWh;0.00138486;0;0.00138486
+Production of electricity by petroleum and other oil derivatives;AT;A_POWP;32750;kg CO2/kWh;0.703794021;0.696;0.007794021
+Production of electricity by petroleum and other oil derivatives;AU;A_POWP;32751;kg CO2/kWh;0.842542022;0.75;0.092542022
+Production of electricity by petroleum and other oil derivatives;BE;A_POWP;32752;kg CO2/kWh;1.110329383;1.08;0.030329383
+Production of electricity by petroleum and other oil derivatives;BG;A_POWP;32753;kg CO2/kWh;1.214710286;1.14;0.074710286
+Production of electricity by petroleum and other oil derivatives;BR;A_POWP;32754;kg CO2/kWh;0.780050702;0.685;0.095050702
+Production of electricity by petroleum and other oil derivatives;CA;A_POWP;32755;kg CO2/kWh;0.969253768;0.897;0.072253768
+Production of electricity by petroleum and other oil derivatives;CH;A_POWP;32756;kg CO2/kWh;0.717492664;0.697;0.020492664
+Production of electricity by petroleum and other oil derivatives;CN;A_POWP;32757;kg CO2/kWh;1.166052127;1.05;0.116052127
+Production of electricity by petroleum and other oil derivatives;CY;A_POWP;32758;kg CO2/kWh;0.848169188;0.733;0.115169188
+Production of electricity by petroleum and other oil derivatives;CZ;A_POWP;32759;kg CO2/kWh;0.802491505;0.745;0.057491505
+Production of electricity by petroleum and other oil derivatives;DE;A_POWP;32760;kg CO2/kWh;0.870475627;0.742;0.128475627
+Production of electricity by petroleum and other oil derivatives;DK;A_POWP;32761;kg CO2/kWh;1.112483506;1.1;0.012483506
+Production of electricity by petroleum and other oil derivatives;EE;A_POWP;32762;kg CO2/kWh;0.823145151;0.74;0.083145151
+Production of electricity by petroleum and other oil derivatives;ES;A_POWP;32763;kg CO2/kWh;0.794507649;0.753;0.041507649
+Production of electricity by petroleum and other oil derivatives;FI;A_POWP;32764;kg CO2/kWh;0.775951155;0.772;0.003951155
+Production of electricity by petroleum and other oil derivatives;FR;A_POWP;32765;kg CO2/kWh;0.771112172;0.726;0.045112172
+Production of electricity by petroleum and other oil derivatives;GB;A_POWP;32766;kg CO2/kWh;1.07421635;0.991;0.08321635
+Production of electricity by petroleum and other oil derivatives;GR;A_POWP;32767;kg CO2/kWh;0.847549853;0.6;0.247549853
+Production of electricity by petroleum and other oil derivatives;HR;A_POWP;32768;kg CO2/kWh;0.756026216;0.697;0.059026216
+Production of electricity by petroleum and other oil derivatives;HU;A_POWP;32769;kg CO2/kWh;0.926413103;0.919;0.007413103
+Production of electricity by petroleum and other oil derivatives;ID;A_POWP;32770;kg CO2/kWh;0.984022294;0.809;0.175022294
+Production of electricity by petroleum and other oil derivatives;IE;A_POWP;32771;kg CO2/kWh;0.800936377;0.767;0.033936377
+Production of electricity by petroleum and other oil derivatives;IN;A_POWP;32772;kg CO2/kWh;1.19765969;1.15;0.04765969
+Production of electricity by petroleum and other oil derivatives;IT;A_POWP;32773;kg CO2/kWh;0.826001248;0.808;0.018001248
+Production of electricity by petroleum and other oil derivatives;JP;A_POWP;32774;kg CO2/kWh;0.678429119;0.641;0.037429119
+Production of electricity by petroleum and other oil derivatives;KR;A_POWP;32775;kg CO2/kWh;0.810492858;0.71;0.100492858
+Production of electricity by petroleum and other oil derivatives;MT;A_POWP;32776;kg CO2/kWh;0.879557789;0.777;0.102557789
+Production of electricity by petroleum and other oil derivatives;MX;A_POWP;32777;kg CO2/kWh;0.903454494;0.769;0.134454494
+Production of electricity by petroleum and other oil derivatives;NL;A_POWP;32778;kg CO2/kWh;0.765724641;0.701;0.064724641
+Production of electricity by petroleum and other oil derivatives;NO;A_POWP;32779;kg CO2/kWh;0.450125895;0.348;0.102125895
+Production of electricity by petroleum and other oil derivatives;PL;A_POWP;32780;kg CO2/kWh;0.711987317;0.697;0.014987317
+Production of electricity by petroleum and other oil derivatives;PT;A_POWP;32781;kg CO2/kWh;0.698416924;0.679;0.019416924
+Production of electricity by petroleum and other oil derivatives;RO;A_POWP;32782;kg CO2/kWh;0.582810255;0.55;0.032810255
+Production of electricity by petroleum and other oil derivatives;RU;A_POWP;32783;kg CO2/kWh;1.098207109;1.05;0.048207109
+Production of electricity by petroleum and other oil derivatives;SE;A_POWP;32784;kg CO2/kWh;0.861347489;0.86;0.001347489
+Production of electricity by petroleum and other oil derivatives;SI;A_POWP;32785;kg CO2/kWh;0.896526207;0.871;0.025526207
+Production of electricity by petroleum and other oil derivatives;SK;A_POWP;32786;kg CO2/kWh;0.002745468;0;0.002745468
+Production of electricity by petroleum and other oil derivatives;TR;A_POWP;32787;kg CO2/kWh;0.792485895;0.667;0.125485895
+Production of electricity by petroleum and other oil derivatives;US;A_POWP;32788;kg CO2/kWh;0.930603792;0.891;0.039603792
+Production of electricity by petroleum and other oil derivatives;WA;A_POWP;32789;kg CO2/kWh;0.76479388;0.66;0.10479388
+Production of electricity by petroleum and other oil derivatives;WE;A_POWP;32790;kg CO2/kWh;0.866685447;0.761;0.105685447
+Production of electricity by petroleum and other oil derivatives;WF;A_POWP;32791;kg CO2/kWh;0.854342557;0.77;0.084342557
+Production of electricity by petroleum and other oil derivatives;WL;A_POWP;32792;kg CO2/kWh;0.940074258;0.81;0.130074258
+Production of electricity by petroleum and other oil derivatives;WM;A_POWP;32793;kg CO2/kWh;1.138508535;0.977;0.161508535
+Production of electricity by petroleum and other oil derivatives;ZA;A_POWP;32794;kg CO2/kWh;0.898077072;0.844;0.054077072
+Production of electricity by biomass and waste;AT;A_POWB;32796;kg CO2/kWh;0.485173621;0.394;0.091173621
+Production of electricity by biomass and waste;AU;A_POWB;32797;kg CO2/kWh;0.772146052;0.447;0.325146052
+Production of electricity by biomass and waste;BE;A_POWB;32798;kg CO2/kWh;0.074641394;0.0407;0.033941394
+Production of electricity by biomass and waste;BG;A_POWB;32799;kg CO2/kWh;0.571947928;0.307;0.264947928
+Production of electricity by biomass and waste;BR;A_POWB;32800;kg CO2/kWh;0.776117869;0.415;0.361117869
+Production of electricity by biomass and waste;CA;A_POWB;32801;kg CO2/kWh;0.247255767;0.0589;0.188355767
+Production of electricity by biomass and waste;CH;A_POWB;32802;kg CO2/kWh;0.453596374;0.338;0.115596374
+Production of electricity by biomass and waste;CN;A_POWB;32803;kg CO2/kWh;0.077981996;0.0275;0.050481996
+Production of electricity by biomass and waste;CZ;A_POWB;32804;kg CO2/kWh;0.715414791;0.528;0.187414791
+Production of electricity by biomass and waste;DE;A_POWB;32805;kg CO2/kWh;0.55952161;0.362;0.19752161
+Production of electricity by biomass and waste;DK;A_POWB;32806;kg CO2/kWh;1.662873287;1.08;0.582873287
+Production of electricity by biomass and waste;EE;A_POWB;32807;kg CO2/kWh;0.053624024;0.00885;0.044774024
+Production of electricity by biomass and waste;ES;A_POWB;32808;kg CO2/kWh;0.194052463;0.121;0.073052463
+Production of electricity by biomass and waste;FI;A_POWB;32809;kg CO2/kWh;0.138374768;0.108;0.030374768
+Production of electricity by biomass and waste;FR;A_POWB;32810;kg CO2/kWh;0.731333781;0.52;0.211333781
+Production of electricity by biomass and waste;GB;A_POWB;32811;kg CO2/kWh;0.317171839;0.189;0.128171839
+Production of electricity by biomass and waste;GR;A_POWB;32812;kg CO2/kWh;1.14913324;0.579;0.57013324
+Production of electricity by biomass and waste;HR;A_POWB;32813;kg CO2/kWh;0.898979233;0.562;0.336979233
+Production of electricity by biomass and waste;HU;A_POWB;32814;kg CO2/kWh;0.129629561;0.0777;0.051929561
+Production of electricity by biomass and waste;ID;A_POWB;32815;kg CO2/kWh;0.106289538;0.0125;0.093789538
+Production of electricity by biomass and waste;IE;A_POWB;32816;kg CO2/kWh;0.36725649;0.182;0.18525649
+Production of electricity by biomass and waste;IN;A_POWB;32817;kg CO2/kWh;0.159073821;0.072;0.087073821
+Production of electricity by biomass and waste;IT;A_POWB;32818;kg CO2/kWh;0.275639622;0.205;0.070639622
+Production of electricity by biomass and waste;JP;A_POWB;32819;kg CO2/kWh;0.099178884;0.0225;0.076678884
+Production of electricity by biomass and waste;KR;A_POWB;32820;kg CO2/kWh;0.148840116;0.0594;0.089440116
+Production of electricity by biomass and waste;MX;A_POWB;32821;kg CO2/kWh;0.241335791;0.153;0.088335791
+Production of electricity by biomass and waste;NL;A_POWB;32822;kg CO2/kWh;0.096477761;0.0437;0.052777761
+Production of electricity by biomass and waste;NO;A_POWB;32823;kg CO2/kWh;0.494808923;0.312;0.182808923
+Production of electricity by biomass and waste;PL;A_POWB;32824;kg CO2/kWh;0.07394298;0.0176;0.05634298
+Production of electricity by biomass and waste;PT;A_POWB;32825;kg CO2/kWh;0.238984632;0.176;0.062984632
+Production of electricity by biomass and waste;RO;A_POWB;32826;kg CO2/kWh;0.232270532;0.0989;0.133370532
+Production of electricity by biomass and waste;SI;A_POWB;32827;kg CO2/kWh;1.315805911;1.01;0.305805911
+Production of electricity by biomass and waste;SK;A_POWB;32828;kg CO2/kWh;0.619325289;0.52;0.099325289
+Production of electricity by biomass and waste;TR;A_POWB;32829;kg CO2/kWh;0.803880532;0.516;0.287880532
+Production of electricity by biomass and waste;US;A_POWB;32830;kg CO2/kWh;0.48963802;0.332;0.15763802
+Production of electricity by biomass and waste;WA;A_POWB;32831;kg CO2/kWh;0.18523088;0.0727;0.11253088
+Production of electricity by biomass and waste;WE;A_POWB;32832;kg CO2/kWh;0.724074028;0.331;0.393074028
+Production of electricity by biomass and waste;WF;A_POWB;32833;kg CO2/kWh;0.119311944;0.0493;0.070011944
+Production of electricity by biomass and waste;WL;A_POWB;32834;kg CO2/kWh;0.128098425;0.0505;0.077598425
+Production of electricity by biomass and waste;WM;A_POWB;32835;kg CO2/kWh;0.713057315;0.473;0.240057315
+Production of electricity by biomass and waste;ZA;A_POWB;32836;kg CO2/kWh;0.33693929;0.0273;0.30963929
+Production of electricity by solar photovoltaic;AT;A_POWS;32838;kg CO2/kWh;0.003240052;0;0.003240052
+Production of electricity by solar photovoltaic;AU;A_POWS;32839;kg CO2/kWh;0.006512861;0;0.006512861
+Production of electricity by solar photovoltaic;BE;A_POWS;32840;kg CO2/kWh;0.007657199;0;0.007657199
+Production of electricity by solar photovoltaic;CA;A_POWS;32841;kg CO2/kWh;0.008996258;0;0.008996258
+Production of electricity by solar photovoltaic;CH;A_POWS;32842;kg CO2/kWh;0.007499666;0;0.007499666
+Production of electricity by solar photovoltaic;CN;A_POWS;32843;kg CO2/kWh;0.07638301;0;0.07638301
+Production of electricity by solar photovoltaic;CY;A_POWS;32844;kg CO2/kWh;0.012574183;0;0.012574183
+Production of electricity by solar photovoltaic;CZ;A_POWS;32845;kg CO2/kWh;0.006189486;0;0.006189486
+Production of electricity by solar photovoltaic;DE;A_POWS;32846;kg CO2/kWh;0.00586207;0;0.00586207
+Production of electricity by solar photovoltaic;DK;A_POWS;32847;kg CO2/kWh;0.00533441;0;0.00533441
+Production of electricity by solar photovoltaic;ES;A_POWS;32848;kg CO2/kWh;0.006091713;0;0.006091713
+Production of electricity by solar photovoltaic;FI;A_POWS;32849;kg CO2/kWh;0.015215665;0;0.015215665
+Production of electricity by solar photovoltaic;FR;A_POWS;32850;kg CO2/kWh;0.010743412;0;0.010743412
+Production of electricity by solar photovoltaic;GB;A_POWS;32851;kg CO2/kWh;0.001298884;0;0.001298884
+Production of electricity by solar photovoltaic;GR;A_POWS;32852;kg CO2/kWh;0.006463831;0;0.006463831
+Production of electricity by solar photovoltaic;HR;A_POWS;32853;kg CO2/kWh;0.001452214;0;0.001452214
+Production of electricity by solar photovoltaic;IN;A_POWS;32854;kg CO2/kWh;0.010265083;0;0.010265083
+Production of electricity by solar photovoltaic;IT;A_POWS;32855;kg CO2/kWh;0.004198084;0;0.004198084
+Production of electricity by solar photovoltaic;JP;A_POWS;32856;kg CO2/kWh;0.002419316;0;0.002419316
+Production of electricity by solar photovoltaic;KR;A_POWS;32857;kg CO2/kWh;0.031763991;0;0.031763991
+Production of electricity by solar photovoltaic;LU;A_POWS;32858;kg CO2/kWh;0.012493387;0;0.012493387
+Production of electricity by solar photovoltaic;MX;A_POWS;32859;kg CO2/kWh;0.000382846;0;0.000382846
+Production of electricity by solar photovoltaic;NL;A_POWS;32860;kg CO2/kWh;0.00604191;0;0.00604191
+Production of electricity by solar photovoltaic;PT;A_POWS;32861;kg CO2/kWh;0.003092664;0;0.003092664
+Production of electricity by solar photovoltaic;SE;A_POWS;32862;kg CO2/kWh;0.001224944;0;0.001224944
+Production of electricity by solar photovoltaic;US;A_POWS;32863;kg CO2/kWh;0.004086602;0;0.004086602
+Production of electricity by solar photovoltaic;WA;A_POWS;32864;kg CO2/kWh;0.146490931;0;0.146490931
+Production of electricity by solar photovoltaic;WF;A_POWS;32865;kg CO2/kWh;0.096147284;0;0.096147284
+Production of electricity by solar photovoltaic;WM;A_POWS;32866;kg CO2/kWh;0.073777814;0;0.073777814
+Production of electricity by solar photovoltaic;ZA;A_POWS;32867;kg CO2/kWh;0.000203821;0;0.000203821
+Production of electricity by tide, wave, ocean;CA;A_POWO;32870;kg CO2/kWh;0.019316408;0;0.019316408
+Production of electricity by tide, wave, ocean;FR;A_POWO;32871;kg CO2/kWh;0.032301907;0;0.032301907
+Production of electricity by geothermal;AT;A_POWM;32873;kg CO2/kWh;0.007002832;0;0.007002832
+Production of electricity by geothermal;CN;A_POWM;32874;kg CO2/kWh;0.105635834;0;0.105635834
+Production of electricity by geothermal;ID;A_POWM;32875;kg CO2/kWh;0.020348303;0;0.020348303
+Production of electricity by geothermal;IT;A_POWM;32876;kg CO2/kWh;0.011167037;0;0.011167037
+Production of electricity by geothermal;JP;A_POWM;32877;kg CO2/kWh;0.030034078;0;0.030034078
+Production of electricity by geothermal;MX;A_POWM;32878;kg CO2/kWh;0.003263552;0;0.003263552
+Production of electricity by geothermal;PT;A_POWM;32879;kg CO2/kWh;0.00951918;0;0.00951918
+Production of electricity by geothermal;RU;A_POWM;32880;kg CO2/kWh;0.021969827;0;0.021969827
+Production of electricity by geothermal;TR;A_POWM;32881;kg CO2/kWh;0.032903235;0;0.032903235
+Production of electricity by geothermal;US;A_POWM;32882;kg CO2/kWh;0.006948598;0;0.006948598
+Production of electricity by geothermal;WA;A_POWM;32883;kg CO2/kWh;0.08442689;0;0.08442689
+Production of electricity by geothermal;WE;A_POWM;32884;kg CO2/kWh;0.150580475;0;0.150580475
+Production of electricity by geothermal;WF;A_POWM;32885;kg CO2/kWh;0.058771164;0;0.058771164
+Production of electricity by geothermal;WL;A_POWM;32886;kg CO2/kWh;0.053863427;0;0.053863427
