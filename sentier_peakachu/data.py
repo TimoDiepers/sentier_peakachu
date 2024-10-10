@@ -6,11 +6,19 @@ import sentier_data_tools as sdt
 from sentier_peakachu.entsoe import get_generation_data
 
 
-def create_local_datastorage(reset: bool = True):
+def create_local_electricity_datastorage(reset: bool = True):
     if reset:
         sdt.reset_local_database()
+    start_time = pd.Timestamp("20241008", tz="Europe/Brussels")
+    end_time = pd.Timestamp("20241009", tz="Europe/Brussels")
+    create_country_mix_dataset("DE", start_time, end_time)
 
-    # DF1
+    create_plant_emission_datasets()
+
+
+def create_country_mix_dataset(
+    country_code: str, start_time: pd.Timestamp, end_time: pd.Timestamp
+):
     metadata = sdt.Datapackage(
         name="electricity_markets",
         description="Electricity markets data from ENTSO-E",
@@ -24,11 +32,10 @@ def create_local_datastorage(reset: bool = True):
         homepage="https://github.com/TimoDiepers/sentier_peakachu/",
     ).metadata()
 
-    country_code = "PL"
     df = get_generation_data(
         country_code=country_code,
-        start=pd.Timestamp("20241008", tz="Europe/Brussels"),
-        end=pd.Timestamp("20241009", tz="Europe/Brussels"),
+        start=start_time,
+        end=end_time,
     )
     df.index.name = "timestamp"
     df = df[["Fossil Brown coal/Lignite", "Fossil Gas", "Solar"]].reset_index()
@@ -59,6 +66,8 @@ def create_local_datastorage(reset: bool = True):
         valid_to=datetime(2028, 1, 1),
     ).save()
 
+
+def create_plant_emission_datasets():
     # DF2
     metadata = sdt.Datapackage(
         name="emission data power plants",
@@ -104,7 +113,10 @@ def create_local_datastorage(reset: bool = True):
     trace_frame = pd.read_csv("../data/electricity-generation_emissions_sources.csv")
 
     filtered_df = trace_frame[trace_frame["gas"] == "co2e_100yr"]
-    grouped_dfs = dict(filtered_df.groupby(["iso3_country", "source_type"]))
+    grouped_dfs = {
+        name: group
+        for name, group in filtered_df.groupby(["iso3_country", "source_type"])
+    }
 
     for (country, source_type), df in grouped_dfs.items():
         filtered_df = df[
