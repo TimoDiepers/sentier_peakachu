@@ -33,6 +33,7 @@ dependencies = [
     "entsoe-py",
     "sentier-data-tools",
     "loguru",
+    "polars",
 ]
 
 [project.urls]
