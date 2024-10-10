@@ -313,37 +313,7 @@ EL_ENERGY_PRODUCTS_DATA = [
         URIRef("https://en.wikipedia.org/wiki/Peat")
     ),
 
-    # Renewable electrical energy
-    (
-        URIRef(PRODUCTS + "Renewable electrical energy"),
-        RDF.type,
-        SKOS.Concept
-    ),
-    (
-        URIRef(PRODUCTS + "Renewable electrical energy"),
-        SKOS.broader,
-        URIRef("http://data.europa.eu/xsp/cn2024/271600000080")
-    ),
-    (
-        URIRef(PRODUCTS + "Renewable electrical energy"),
-        SKOS.prefLabel,
-        Literal("Renewable electrical energy", lang="en")
-    ),
-    (
-        URIRef(PRODUCTS + "Renewable electrical energy"),
-        SKOS.definition,
-        Literal("Renewable electrical energy is electrical energy generated from renewable sources such as wind, water, solar, and biomass.", lang="en")
-    ),
-    (
-        URIRef(PRODUCTS + "Renewable electrical energy"),
-        SKOS.related,
-        URIRef("https://en.wikipedia.org/wiki/Renewable_energy")
-    ),
-    (
-        URIRef(PRODUCTS + "Renewable electrical energy"),
-        SKOS.related,
-        URIRef("http://openenergy-platform.org/ontology/oeo/OEO_00010384")
-    ),
+    # Renewable electrical energy - already existing
     # Wind-based electrical energy
     (
         URIRef(PRODUCTS + "Electricity from wind energy"),
@@ -353,7 +323,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Electricity from wind energy"),
         SKOS.broader,
-        URIRef(PRODUCTS + "Renewable electrical energy")
+        URIRef("http://openenergy-platform.org/ontology/oeo/OEO_00010384")
     ),
     (
         URIRef(PRODUCTS + "Electricity from wind energy"),
@@ -424,27 +394,27 @@ EL_ENERGY_PRODUCTS_DATA = [
     ),
     # Water-based electrical energy
     (
-        URIRef(PRODUCTS + "Hydropower"),
+        URIRef(PRODUCTS + "Electricity from hydropower"),
         RDF.type,
         SKOS.Concept
     ),
     (
-        URIRef(PRODUCTS + "Hydropower"),
+        URIRef(PRODUCTS + "Electricity from hydropower"),
         SKOS.broader,
-        URIRef(PRODUCTS + "Renewable electrical energy")
+        URIRef("http://openenergy-platform.org/ontology/oeo/OEO_00010384")
     ),
     (
-        URIRef(PRODUCTS + "Hydropower"),
+        URIRef(PRODUCTS + "Electricity from hydropower"),
         SKOS.prefLabel,
         Literal("Water-based electrical energy", lang="en")
     ),
     (
-        URIRef(PRODUCTS + "Hydropower"),
+        URIRef(PRODUCTS + "Electricity from hydropower"),
         SKOS.definition,
-        Literal("Hydropower is electrical energy generated through the use of water resources.", lang="en")
+        Literal("Electricity from hydropower is electrical energy generated through the use of water resources.", lang="en")
     ),
     (
-        URIRef(PRODUCTS + "Hydropower"),
+        URIRef(PRODUCTS + "Electricity from hydropower"),
         SKOS.related,
         URIRef("https://en.wikipedia.org/wiki/Hydroelectricity")
     ),
@@ -457,7 +427,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Electrical energy from hydro water reservoirs"),
         SKOS.broader,
-        URIRef(PRODUCTS + "Hydropower")
+        URIRef(PRODUCTS + "Electricity from hydropower")
     ),
     (
         URIRef(PRODUCTS + "Electrical energy from hydro water reservoirs"),
@@ -469,11 +439,6 @@ EL_ENERGY_PRODUCTS_DATA = [
         SKOS.definition,
         Literal("Electrical energy from hydro water reservoirs is generated using stored water in reservoirs to drive hydro turbines.", lang="en")
     ),
-    (
-        URIRef(PRODUCTS + "Electrical energy from hydro water reservoirs"),
-        SKOS.related,
-        URIRef("tbd")
-    ),
     # Electrical energy from pumped storage hydro
     (
         URIRef(PRODUCTS + "Electrical energy from pumped storage hydro"),
@@ -483,7 +448,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Electrical energy from pumped storage hydro"),
         SKOS.broader,
-        URIRef(PRODUCTS + "Hydropower")
+        URIRef(PRODUCTS + "Electricity from hydropower")
     ),
     (
         URIRef(PRODUCTS + "Electrical energy from pumped storage hydro"),
@@ -498,7 +463,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Electrical energy from pumped storage hydro"),
         SKOS.related,
-        URIRef("tbd")
+        URIRef("https://en.wikipedia.org/wiki/Pumped-storage_hydroelectricity")
     ),
     # Electrical energy from run-of-river and poundage hydro
     (
@@ -509,7 +474,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Electrical energy from run-of-river and poundage hydro"),
         SKOS.broader,
-        URIRef(PRODUCTS + "Hydropower")
+        URIRef(PRODUCTS + "Electricity from hydropower")
     ),
     (
         URIRef(PRODUCTS + "Electrical energy from run-of-river and poundage hydro"),
@@ -524,7 +489,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Electrical energy from run-of-river and poundage hydro"),
         SKOS.related,
-        URIRef("tbd")
+        URIRef("https://en.wikipedia.org/wiki/Run-of-the-river_hydroelectricity")
     ),
     # Electrical energy from marine sources
     (
@@ -535,7 +500,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Electrical energy from marine sources"),
         SKOS.broader,
-        URIRef(PRODUCTS + "Hydropower")
+        URIRef(PRODUCTS + "Electricity from hydropower")
     ),
     (
         URIRef(PRODUCTS + "Electrical energy from marine sources"),
@@ -550,34 +515,9 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Electrical energy from marine sources"),
         SKOS.related,
-        URIRef("tbd")
+        URIRef("https://en.wikipedia.org/wiki/Marine_energy")
     ),
-    # Solar-based electrical energy
-    (
-        URIRef(PRODUCTS + "Solar-based electrical energy"),
-        RDF.type,
-        SKOS.Concept
-    ),
-    (
-        URIRef(PRODUCTS + "Solar-based electrical energy"),
-        SKOS.broader,
-        URIRef(PRODUCTS + "Renewable electrical energy")
-    ),
-    (
-        URIRef(PRODUCTS + "Solar-based electrical energy"),
-        SKOS.prefLabel,
-        Literal("Solar-based electrical energy", lang="en")
-    ),
-    (
-        URIRef(PRODUCTS + "Solar-based electrical energy"),
-        SKOS.definition,
-        Literal("Solar-based electrical energy is generated using solar panels to convert sunlight into electricity.", lang="en")
-    ),
-    (
-        URIRef(PRODUCTS + "Solar-based electrical energy"),
-        SKOS.related,
-        URIRef("tbd")
-    ),
+    # Solar-based electrical energy - already existing
     # Other renewable electrical energy
     (
         URIRef(PRODUCTS + "Other renewable electrical energy"),
@@ -587,7 +527,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Other renewable electrical energy"),
         SKOS.broader,
-        URIRef(PRODUCTS + "Renewable electrical energy")
+        URIRef("http://openenergy-platform.org/ontology/oeo/OEO_00010384")
     ),
     (
         URIRef(PRODUCTS + "Other renewable electrical energy"),
@@ -598,11 +538,6 @@ EL_ENERGY_PRODUCTS_DATA = [
         URIRef(PRODUCTS + "Other renewable electrical energy"),
         SKOS.definition,
         Literal("Other renewable electrical energy includes electricity generated from sources such as geothermal and biomass.", lang="en")
-    ),
-    (
-        URIRef(PRODUCTS + "Other renewable electrical energy"),
-        SKOS.related,
-        URIRef("tbd")
     ),
     # Electrical energy from geothermal sources
     (
@@ -628,7 +563,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Electrical energy from geothermal sources"),
         SKOS.related,
-        URIRef("tbd")
+        URIRef("https://en.wikipedia.org/wiki/Geothermal_energy")
     ),
     # Electrical energy from biomass
     (
@@ -654,7 +589,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Electrical energy from biomass"),
         SKOS.related,
-        URIRef("tbd")
+        URIRef("https://en.wikipedia.org/wiki/Bioenergy")
     ),
     # Electrical energy from other renewable sources
     (
@@ -677,11 +612,6 @@ EL_ENERGY_PRODUCTS_DATA = [
         SKOS.definition,
         Literal("Electrical energy from other renewable sources includes electricity generated from various innovative renewable technologies.", lang="en")
     ),
-    (
-        URIRef(PRODUCTS + "Electrical energy from other renewable sources"),
-        SKOS.related,
-        URIRef("tbd")
-    ),
     # Other electrical energy
     (
         URIRef(PRODUCTS + "Other electrical energy"),
@@ -691,7 +621,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Other electrical energy"),
         SKOS.broader,
-        URIRef("http://data.europa.eu/xsp/cn2024/271600000080")  # Use appropriate broader URI
+        URIRef("http://data.europa.eu/xsp/cn2024/271600000080")  # Electrical energy
     ),
     (
         URIRef(PRODUCTS + "Other electrical energy"),
@@ -703,37 +633,7 @@ EL_ENERGY_PRODUCTS_DATA = [
         SKOS.definition,
         Literal("Other electrical energy includes various forms of electrical energy generation not classified as renewable or fossil fuel-based.", lang="en")
     ),
-    (
-        URIRef(PRODUCTS + "Other electrical energy"),
-        SKOS.related,
-        URIRef("tbd")
-    ),
-    # Nuclear-based electrical energy
-    (
-        URIRef(PRODUCTS + "Nuclear-based electrical energy"),
-        RDF.type,
-        SKOS.Concept
-    ),
-    (
-        URIRef(PRODUCTS + "Nuclear-based electrical energy"),
-        SKOS.broader,
-        URIRef(PRODUCTS + "Other electrical energy")
-    ),
-    (
-        URIRef(PRODUCTS + "Nuclear-based electrical energy"),
-        SKOS.prefLabel,
-        Literal("Nuclear-based electrical energy", lang="en")
-    ),
-    (
-        URIRef(PRODUCTS + "Nuclear-based electrical energy"),
-        SKOS.definition,
-        Literal("Nuclear-based electrical energy is generated through nuclear reactions, typically fission, in which atomic nuclei are split to release energy.", lang="en")
-    ),
-    (
-        URIRef(PRODUCTS + "Nuclear-based electrical energy"),
-        SKOS.related,
-        URIRef("tbd")
-    ),
+    # Nuclear-based electrical energy - already existing
     # Waste-based electrical energy
     (
         URIRef(PRODUCTS + "Waste-based electrical energy"),
@@ -758,7 +658,7 @@ EL_ENERGY_PRODUCTS_DATA = [
     (
         URIRef(PRODUCTS + "Waste-based electrical energy"),
         SKOS.related,
-        URIRef("tbd")
+        URIRef("https://en.wikipedia.org/wiki/Waste-to-energy")
     ),
     # Other electrical energy sources
     (
@@ -780,11 +680,6 @@ EL_ENERGY_PRODUCTS_DATA = [
         URIRef(PRODUCTS + "Other electrical energy sources"),
         SKOS.definition,
         Literal("Other electrical energy sources encompass diverse methods and technologies for generating electricity that do not fall into traditional categories.", lang="en")
-    ),
-    (
-        URIRef(PRODUCTS + "Other electrical energy sources"),
-        SKOS.related,
-        URIRef("tbd")
     ),
 ]
 skosify.infer.skos_hierarchical(EL_ENERGY_PRODUCTS_DATA)
