@@ -1,7 +1,7 @@
 import polars as pl
 
 BASE_URL = "https://sws.geonames.org/"
-LOOKUP_FILE = "data/iso_iri_table.csv"
+LOOKUP_FILE = "../data/iso_iri_table.csv"
 LOOKUP_SEPARATOR = "\t"
 
 
