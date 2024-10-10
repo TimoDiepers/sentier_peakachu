@@ -14,6 +14,15 @@ def create_local_electricity_datastorage(reset: bool = True):
     create_country_mix_dataset("DE", start_time, end_time)
 
     create_plant_emission_datasets()
+    create_bonsai_emission_factor_datasets()
+
+
+def get_country_iri(country):
+    return f"https://example.com/locations/{country}"
+
+
+def get_electricity_iri(source_type):
+    return f"https://example.com/electricity_from_{source_type[:3]}"
 
 
 def create_country_mix_dataset(
@@ -103,13 +112,6 @@ def create_plant_emission_datasets():
         "https://example.com/powergeneration",
         "https://example.com/emissions",
     ]
-
-    def get_country_iri(country):
-        return f"https://example.com/locations/{country}"
-
-    def get_electricity_iri(source_type):
-        return f"https://example.com/electricity_from_{source_type[:3]}"
-
     trace_frame = pd.read_csv("../data/electricity-generation_emissions_sources.csv")
 
     filtered_df = trace_frame[trace_frame["gas"] == "co2e_100yr"]
@@ -146,4 +148,77 @@ def create_plant_emission_datasets():
             version=1,
             valid_from=datetime.strptime(valid_from_str, "%Y-%m-%d %H:%M:%S"),
             valid_to=datetime.strptime(valid_to_str, "%Y-%m-%d %H:%M:%S"),
+        ).save()
+
+
+def create_bonsai_emission_factor_datasets():
+    """
+    Create datasets for emission factors for different sources of electricity from the bonsai database,
+    splitting emissions in direct and indirect emissions.
+    Unit is kg CO2-eq/kWh.
+    """
+
+    metadata = sdt.Datapackage(
+        name="emission factors for regional electricity producing technologies",
+        description="Bonsai emission factor data for regional electricity producing technologies",
+        contributors=[
+            {
+                "title": "Karin Treyer",
+                "path": "https://www.psi.ch/en/ta/people/karin-treyer",
+                "role": "author",
+            },
+            {
+                "title": "Chris Mutel",
+                "path": "https://chris.mutel.org/",
+                "role": "wrangler",
+            },
+        ],
+        homepage="https://example.com/additional_inventories",
+    ).metadata()
+
+    UNITS_EMISSION_FACTORS = [
+        "https://example.com/units/kgCO2eqPerkWh",
+        "https://example.com/units/kgCO2eqPerkWh",
+    ]
+    COLUMNS_EMISSION_FACTORS = [
+        "https://example.com/direct_CO2_emissions",
+        "https://example.com/indirect_CO2_emissions",
+    ]
+
+    bonsai_frame = pd.read_csv("../data/bonsai_emission_factors.csv", delimiter=";")
+
+    filtered_df = bonsai_frame[
+        [
+            "description",
+            "region_code",
+            "direct emission factor",
+            "indirect emission factor",
+        ]
+    ]
+
+    grouped_dfs = {
+        name: group
+        for name, group in filtered_df.groupby(["region_code", "description"])
+    }
+
+    for (country, technology), df in grouped_dfs.items():
+        df = df[["direct emission factor", "indirect emission factor"]]
+        df.columns = COLUMNS_EMISSION_FACTORS
+        valid_from_str = "2016-01-01"  # Bonsai/EXIOBASE data from year 2016
+        valid_to_str = "2016-12-31"
+
+        sdt.Dataset(
+            name=f"bonsai emission factors, {country}, {technology}",
+            dataframe=df,
+            kind=sdt.DatasetKind.BOM,
+            product=get_electricity_iri(technology),
+            columns=[
+                {"iri": x, "unit": y}
+                for x, y in zip(df.columns, UNITS_EMISSION_FACTORS)
+            ],
+            metadata=metadata,
+            location=get_country_iri(country),
+            version=1,
+            valid_from=valid_from_str,
+            valid_to=valid_to_str,
         ).save()
