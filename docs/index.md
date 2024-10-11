@@ -10,10 +10,8 @@
 
 The Sentier Peakachu package is designed to calculate the carbon footprint of electricity production, focusing on 1 kWh of electricity produced from a specific energy mix or technology at a particular region and time. This functionality enables users to quantify the emissions impact of electricity generation under various scenarios, providing insights into the environmental performance of different power generation methods.
 The package draws from two key data sources:
-
-    ENTSO-E: Plant-specific carbon emissions data, offering granular information about emissions produced by individual power plants in Europe.
-
-    Climate Trace: A comprehensive dataset on electricity generation mixes, covering a wide range of technologies such as coal, natural gas, solar, wind, nuclear, biomass, and more. This dataset includes regional and temporal variations in electricity production, allowing for highly specific analyses.
+* **ENTSO-E**: Plant-specific carbon emissions data, offering granular information about emissions produced by individual power plants in Europe.
+* **Climate Trace**: A comprehensive dataset on electricity generation mixes, covering a wide range of technologies such as coal, natural gas, solar, wind, nuclear, biomass, and more. This dataset includes regional and temporal variations in electricity production, allowing for highly specific analyses.
 
 ## Purpose and Features
 
