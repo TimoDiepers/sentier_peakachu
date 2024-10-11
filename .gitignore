@@ -128,3 +128,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Location Files
+data\Location-Services\bigger_faster_altnames.ttl
+data\Location-Services\faster_altnames.ttl
+data\Location-Services\geonames-iri.ttl
+data\Location-Services\hierarchy.txt
+data\Location-Services\plci-adm1-rgn-filt.ttl
+data\Location-Services\plci-adm1-rgn.ttl
+data\Location-Services\plci-adm1.ttl
+data\Location-Services\sample_hierarchy.ttl
+data\Location-Services\with_alt_names.ttl
