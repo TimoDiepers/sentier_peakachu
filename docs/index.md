@@ -25,11 +25,11 @@ Practical Applications
 
 This tool can be applied in various fields, such as:
 
--Sustainability Reporting: Helping organizations track and report their carbon emissions from energy use, based on real-world data.
+* Sustainability Reporting: Helping organizations track and report their carbon emissions from energy use, based on real-world data.
 
--Energy Policy and Planning: Supporting government and industry decisions by providing insights into the carbon footprint of different energy sources at specific times and locations.
+* Energy Policy and Planning: Supporting government and industry decisions by providing insights into the carbon footprint of different energy sources at specific times and locations.
 
--Life Cycle Assessment (LCA): Integrating seamlessly with broader LCA frameworks to evaluate the overall environmental impact of energy generation as part of a product or service lifecycle.
+* Life Cycle Assessment (LCA): Integrating seamlessly with broader LCA frameworks to evaluate the overall environmental impact of energy generation as part of a product or service lifecycle.
 Future Enhancements
 
 Sentier Peakachu is part of the Brightway Software Framework, a widely-used platform for Life Cycle Assessment (LCA). Planned future updates will include extended support for global electricity datasets, improved integration with existing LCA tools, and more sophisticated algorithms for analyzing the environmental performance of electricity production.
@@ -45,7 +45,7 @@ A(Electrical energy) --> D(Nuclear-based electrical energy)
 A(Electrical energy) --> E(Waste-based electrical energy)
 A(Electrical energy) --> F(Other electrical energy sources)
 ```
-
+---
 ```{mermaid}
 graph LR
 A(Fossil fuel-based electrical energy) --> B(Fossil oil-based electrical energy)
@@ -59,7 +59,7 @@ D(Coal-based electrical energy) --> J(Electrical energy from hard coal)
 D(Coal-based electrical energy) --> K(Electrical energy from brown coal/lignite)
 A(Fossil fuel-based electrical energy) --> E(Electrical energy from peat)
 ```
-
+---
 ```{mermaid}
 graph LR
 A(Renewable electrical energy) --> B(Electricity from wind energy)
