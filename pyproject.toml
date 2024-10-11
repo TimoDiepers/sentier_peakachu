@@ -62,6 +62,7 @@ dev = [
 [tool.setuptools]
 license-files = ["LICENSE"]
 include-package-data = true
+package-data = {sentier_peakachu = ["data/*"]}
 packages = ["sentier_peakachu"]
 
 [tool.setuptools.dynamic]
