@@ -67,6 +67,19 @@ html_theme_options = {
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
+    "icon_links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/TimoDiepers/sentier_peakachu",
+            "icon": "fab fa-brands fa-github",
+        },
+        # {
+        #     "name": "Conda",
+        #     "url": "https://anaconda.org/diepers/dynamic_characterization",
+        #     "icon": "fa-brands fa-python",
+        #     "type": "fontawesome",
+        # },
+    ],
     # Toc options
     'collapse_navigation': True,
     'sticky_navigation': True,
