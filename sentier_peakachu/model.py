@@ -1,3 +1,4 @@
+import warnings
 from datetime import datetime
 
 import pandas as pd
@@ -12,6 +13,8 @@ from sentier_data_tools import (
     SentierModel,
     UnitIRI,
 )
+
+from sentier_peakachu.iri_mapping import DIRTY_FIX
 
 from .utils_time import filter_timespan
 
@@ -65,8 +68,10 @@ class ElectricitySourceModel(BottomModel):
                 f"No data available for the specific time range between {self.demand.begin_date} and {self.demand.end_date}."
             )
 
-        total_emissions = df["https://example.com/emissions"].sum()
-        total_production = df["https://example.com/powergeneration"].sum()
+        total_emissions = df[
+            "http://openenergy-platform.org/ontology/oeo/OEO_00260007"
+        ].sum()
+        total_production = df["https://example.com/process-terms/powergeneration"].sum()
         return total_emissions / total_production
 
 
@@ -102,29 +107,48 @@ class ElectricityMixModel(TopModel):
         rounded_begin_date = pd.Timestamp(self.demand.begin_date).round("15min")
         rounded_end_date = pd.Timestamp(self.demand.end_date).round("15min")
 
-        df_merged["https://example.com/timestamp"] = pd.to_datetime(
-            df_merged["https://example.com/timestamp"]
-        ).dt.tz_localize(None)
+        df_merged["https://vocab.sentier.dev/units/quantity-kind/Time"] = (
+            pd.to_datetime(
+                df_merged["https://vocab.sentier.dev/units/quantity-kind/Time"]
+            ).dt.tz_localize(None)
+        )
         filtered_df = df_merged[
-            (df_merged["https://example.com/timestamp"] >= rounded_begin_date)
-            & (df_merged["https://example.com/timestamp"] <= rounded_end_date)
+            (
+                df_merged["https://vocab.sentier.dev/units/quantity-kind/Time"]
+                >= rounded_begin_date
+            )
+            & (
+                df_merged["https://vocab.sentier.dev/units/quantity-kind/Time"]
+                <= rounded_end_date
+            )
         ]
         return filtered_df
 
     def calculate_market_mix(self, df_mixes: pd.DataFrame) -> pd.DataFrame:
         if df_mixes.empty:
             raise ValueError(f"Input DataFrame is empty.")
-        average_mix = df_mixes.mean().drop("https://example.com/timestamp")
+        average_mix = df_mixes.mean().drop(
+            "https://vocab.sentier.dev/units/quantity-kind/Time"
+        )
         return average_mix / average_mix.sum()
 
     def calculate_impact(self, market_shares: pd.Series) -> float:
         emission_factors = []
-        for technology in market_shares.index:
+        market_shares_removed_na = market_shares[
+            market_shares.index.map(DIRTY_FIX).notna()
+        ]
+        market_shares_removed_na.index = market_shares_removed_na.index.map(DIRTY_FIX)
+        market_shares_removed_na_normalized = (
+            market_shares_removed_na / market_shares_removed_na.sum()
+        )
+        for technology in market_shares_removed_na_normalized.index:
             ef = self.calculate_technology_emission_factor(ProductIRI(technology))
             emission_factors.append(ef)
-        logger.debug(f"Market shares: {market_shares}")
+        logger.debug(f"Market shares: {market_shares_removed_na_normalized}")
         logger.debug(f"Emission factors: {emission_factors}")
-        return self.demand.amount * sum(market_shares * emission_factors)
+        return self.demand.amount * sum(
+            market_shares_removed_na_normalized * emission_factors
+        )
 
     def calculate_technology_emission_factor(self, product_iri: ProductIRI) -> float:
         demand = Demand(

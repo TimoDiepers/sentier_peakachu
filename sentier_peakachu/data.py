@@ -4,10 +4,12 @@ from datetime import datetime
 import pandas as pd
 import sentier_data_tools as sdt
 
-from sentier_peakachu.entsoe import (
-    get_generation_data,
-    entsoe_product_iris_mapping,
-    trace_product_iris_mapping,
+from sentier_peakachu.entsoe import get_generation_data
+from sentier_peakachu.iri_mapping import (
+    DIRTY_BONSAI_PRODUCT_IRIS_MAPPING,
+    DIRTY_FIX,
+    ENTSOE_PRODUCT_IRIS_MAPPING,
+    TRACE_PRODUCT_IRIS_MAPPING,
 )
 from sentier_peakachu.utils_location import get_geonames_iri_from_iso_code
 
@@ -50,18 +52,13 @@ def create_country_mix_dataset(
         start=start_time,
         end=end_time,
     )
-    df.index.name = "timestamp"
-
-    df = df.rename(columns=entsoe_product_iris_mapping)
-
+    df.index.name = "https://vocab.sentier.dev/units/quantity-kind/Time"
     df = df.reset_index()
 
-    df = df.rename(
-        columns={"timestamp": "https://vocab.sentier.dev/units/quantity-kind/Time"}
-    )
+    df = df.rename(columns=ENTSOE_PRODUCT_IRIS_MAPPING)
 
     units_tech = ["https://vocab.sentier.dev/units/unit/MegaW-HR"] * len(
-        entsoe_product_iris_mapping
+        ENTSOE_PRODUCT_IRIS_MAPPING
     )  # MW not Mwh but no entry in SKOSMOS
     units_time = [
         "https://vocab.sentier.dev/units/unit/SEC",
@@ -125,7 +122,7 @@ def create_plant_emission_datasets():
     }
 
     for (country, source_type), df in grouped_dfs.items():
-        if source_type not in trace_product_iris_mapping.keys():
+        if source_type not in TRACE_PRODUCT_IRIS_MAPPING.keys():
             warnings.warn(
                 f"Source type {source_type} not found, skipping Dataset creation"
             )
@@ -155,7 +152,7 @@ def create_plant_emission_datasets():
             name=f"power plant data, {country}, {source_type}",
             dataframe=filtered_df,
             kind=sdt.DatasetKind.BOM,
-            product=trace_product_iris_mapping[source_type],
+            product=TRACE_PRODUCT_IRIS_MAPPING[source_type],
             columns=[
                 {"iri": x, "unit": y} for x, y in zip(df.columns, UNITS_POWERPLANTS)
             ],
@@ -218,22 +215,34 @@ def create_bonsai_emission_factor_datasets():
     }
 
     for (country, technology), df in grouped_dfs.items():
+        geonames_iri = get_geonames_iri_from_iso_code(country)
+        if not geonames_iri:
+            warnings.warn(
+                f"Location not found for {country}, skipping Dataset creation"
+            )
+            continue
+        technology_iri = DIRTY_BONSAI_PRODUCT_IRIS_MAPPING.get(technology)
+        if not technology_iri:
+            warnings.warn(
+                f"Technology {technology} not found, skipping Dataset creation"
+            )
+            continue
         df = df[["direct emission factor", "indirect emission factor"]]
         df.columns = COLUMNS_EMISSION_FACTORS
         valid_from_str = "2016-01-01"  # Bonsai/EXIOBASE data from year 2016
-        valid_to_str = "2016-12-31"
+        valid_to_str = "2024-12-31"
 
         sdt.Dataset(
             name=f"bonsai emission factors, {country}, {technology}",
             dataframe=df,
             kind=sdt.DatasetKind.BOM,
-            product=get_electricity_iri(technology),
+            product=technology_iri,
             columns=[
                 {"iri": x, "unit": y}
                 for x, y in zip(df.columns, UNITS_EMISSION_FACTORS)
             ],
             metadata=metadata,
-            location=get_geonames_iri_from_iso_code(country),
+            location=geonames_iri,
             version=1,
             valid_from=valid_from_str,
             valid_to=valid_to_str,
