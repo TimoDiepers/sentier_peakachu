@@ -20,10 +20,6 @@ def create_local_electricity_datastorage(reset: bool = True):
     create_bonsai_emission_factor_datasets()
 
 
-def get_country_iri(country):
-    return f"https://example.com/locations/{country}"
-
-
 def get_electricity_iri(source_type):
     return f"https://example.com/{source_type[:3]}"
 
@@ -224,7 +220,7 @@ def create_bonsai_emission_factor_datasets():
                 for x, y in zip(df.columns, UNITS_EMISSION_FACTORS)
             ],
             metadata=metadata,
-            location=get_country_iri(country),
+            location=get_geonames_iri_from_iso_code(country),
             version=1,
             valid_from=valid_from_str,
             valid_to=valid_to_str,
