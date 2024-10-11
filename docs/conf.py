@@ -88,11 +88,6 @@ html_favicon = 'https://github.com/brightway-lca/brightway-documentation/blob/ma
 ## myst_parser configuration ############################################
 ## https://myst-parser.readthedocs.io/en/latest/configuration.html
 
-source_suffix = {
-    '.rst': 'restructuredtext',
-    '.md': 'markdown',
-}
-
 myst_enable_extensions = [
     "amsmath",
     "colon_fence",
