@@ -15,6 +15,7 @@ dependencies:
   # them
   - pydata-sphinx-theme=0.15.3 # website theme # https://anaconda.org/conda-forge/pydata-sphinx-theme/files
   # extensions
+  - sphinxcontrib-mermaid=0.9.2 # Mermaid support # https://anaconda.org/conda-forge/sphinxcontrib-mermaid/files
   - myst-parser # Markdown support # https://anaconda.org/conda-forge/myst-parser/files
   - sphinx-design # responsive web component support # https://anaconda.org/conda-forge/sphinx-design/files
   - sphinx-copybutton # for copy button in code blocks # https://anaconda.org/conda-forge/sphinx-copybutton/files
