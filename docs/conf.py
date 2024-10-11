@@ -96,6 +96,8 @@ myst_enable_extensions = [
     "html_image",
 ]
 
+nb_execution_mode = "off"
+
 ## autoapi configuration ################################################
 ## https://sphinx-autoapi.readthedocs.io/en/latest/reference/config.html#customisation-options
 
