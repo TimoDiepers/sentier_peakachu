@@ -7,7 +7,7 @@ import sentier_data_tools as sdt
 from sentier_peakachu.entsoe import get_generation_data
 from sentier_peakachu.iri_mapping import (
     DIRTY_BONSAI_PRODUCT_IRIS_MAPPING,
-    DIRTY_FIX,
+    DIRTY_TRACE_AGGREGATION,
     ENTSOE_PRODUCT_IRIS_MAPPING,
     TRACE_PRODUCT_IRIS_MAPPING,
 )
@@ -23,10 +23,6 @@ def create_local_electricity_datastorage(reset: bool = True):
 
     create_plant_emission_datasets()
     create_bonsai_emission_factor_datasets()
-
-
-def get_electricity_iri(source_type):
-    return f"https://example.com/{source_type[:3]}"
 
 
 def create_country_mix_dataset(

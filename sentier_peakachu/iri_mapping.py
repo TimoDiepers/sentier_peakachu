@@ -21,7 +21,7 @@ ENTSOE_PRODUCT_IRIS_MAPPING = {
     "Other": "https://vocab.sentier.dev/products/electricity/other",
 }
 
-DIRTY_FIX = {
+DIRTY_TRACE_AGGREGATION = {
     "https://vocab.sentier.dev/products/electricity/crude-oil": "https://vocab.sentier.dev/products/electricity/fossil-oil",
     "https://vocab.sentier.dev/products/electricity/oil-shale": "https://vocab.sentier.dev/products/electricity/fossil-oil",
     "https://vocab.sentier.dev/products/electricity/natural-gas": "https://vocab.sentier.dev/products/electricity/fossil-gas",
@@ -29,19 +29,19 @@ DIRTY_FIX = {
     "https://vocab.sentier.dev/products/electricity/hard-coal": "https://vocab.sentier.dev/products/electricity/fossil-coal",
     "https://vocab.sentier.dev/products/electricity/lignite": "https://vocab.sentier.dev/products/electricity/fossil-coal",
     "https://vocab.sentier.dev/products/electricity/peat": "https://vocab.sentier.dev/products/electricity/peat",
-    "https://vocab.sentier.dev/products/electricity/offshore": None,
-    "https://vocab.sentier.dev/products/electricity/onshore": None,
-    "https://vocab.sentier.dev/products/electricity/hydro-reservoirs": None,
-    "https://vocab.sentier.dev/products/electricity/pumped-storage": None,
-    "https://vocab.sentier.dev/products/electricity/run-of-river": None,
-    "https://vocab.sentier.dev/products/electricity/marine": None,
-    "http://openenergyplatform.org/ontology/oeo/OEO_00010419/": None,
-    "https://vocab.sentier.dev/products/electricity/geothermal": None,
-    "https://vocab.sentier.dev/products/electricity/biomass": None,
-    "https://vocab.sentier.dev/products/electricity/other-renewable-sources": None,
-    "http://openenergyplatform.org/ontology/oeo/OEO_00010417/": None,
-    "https://vocab.sentier.dev/products/electricity/waste": "https://vocab.sentier.dev/products/electricity/waste",
-    "https://vocab.sentier.dev/products/electricity/other": None,
+    # "https://vocab.sentier.dev/products/electricity/offshore": None,
+    # "https://vocab.sentier.dev/products/electricity/onshore": None,
+    # "https://vocab.sentier.dev/products/electricity/hydro-reservoirs": None,
+    # "https://vocab.sentier.dev/products/electricity/pumped-storage": None,
+    # "https://vocab.sentier.dev/products/electricity/run-of-river": None,
+    # "https://vocab.sentier.dev/products/electricity/marine": None,
+    # "http://openenergyplatform.org/ontology/oeo/OEO_00010419/": None,
+    # "https://vocab.sentier.dev/products/electricity/geothermal": None,
+    # "https://vocab.sentier.dev/products/electricity/biomass": None,
+    # "https://vocab.sentier.dev/products/electricity/other-renewable-sources": None,
+    # "http://openenergyplatform.org/ontology/oeo/OEO_00010417/": None,
+    # "https://vocab.sentier.dev/products/electricity/waste": "https://vocab.sentier.dev/products/electricity/waste",
+    # "https://vocab.sentier.dev/products/electricity/other": None,
 }
 
 TRACE_PRODUCT_IRIS_MAPPING = {
@@ -54,7 +54,7 @@ TRACE_PRODUCT_IRIS_MAPPING = {
 }
 
 DIRTY_BONSAI_PRODUCT_IRIS_MAPPING = {  # RENEWABLES ONLY
-    "Production of electricity by biomass and waste": "https://vocab.sentier.dev/products/electricity/biomass",
+    # "Production of electricity by biomass and waste": "https://vocab.sentier.dev/products/electricity/biomass",
     "Production of electricity by geothermal": "https://vocab.sentier.dev/products/electricity/geothermal",
     "Production of electricity by hydro": "https://vocab.sentier.dev/products/electricity/run-of-river",  # WRONG
     "Production of electricity by nuclear": "http://openenergyplatform.org/ontology/oeo/OEO_00010417/",
@@ -62,3 +62,5 @@ DIRTY_BONSAI_PRODUCT_IRIS_MAPPING = {  # RENEWABLES ONLY
     "Production of electricity by tide, wave, ocean": "https://vocab.sentier.dev/products/electricity/marine",
     "Production of electricity by wind": "https://vocab.sentier.dev/products/electricity/offshore",  # WRONG
 }
+
+# DIRTY_BONSAI_AGGREGATION = {

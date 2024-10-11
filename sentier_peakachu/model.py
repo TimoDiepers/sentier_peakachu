@@ -14,7 +14,10 @@ from sentier_data_tools import (
     UnitIRI,
 )
 
-from sentier_peakachu.iri_mapping import DIRTY_FIX
+from sentier_peakachu.iri_mapping import (
+    DIRTY_BONSAI_PRODUCT_IRIS_MAPPING,
+    DIRTY_TRACE_AGGREGATION,
+)
 
 from .utils_time import filter_timespan
 
@@ -103,7 +106,7 @@ class ElectricityMixModel(TopModel):
                 f"No electricity mix data available for {self.demand.product_iri} in {self.demand.spatial_context}."
             )
         df_merged = self.merge_datasets_to_dataframes(datasets)
-
+        # logger.debug(f"Electricity mix data before filtering: {df_merged}")
         rounded_begin_date = pd.Timestamp(self.demand.begin_date).round("15min")
         rounded_end_date = pd.Timestamp(self.demand.end_date).round("15min")
 
@@ -134,21 +137,65 @@ class ElectricityMixModel(TopModel):
 
     def calculate_impact(self, market_shares: pd.Series) -> float:
         emission_factors = []
-        market_shares_removed_na = market_shares[
-            market_shares.index.map(DIRTY_FIX).notna()
+        market_shares.index = market_shares.index.map(
+            lambda x: DIRTY_TRACE_AGGREGATION.get(x, x)
+        )  # aggregate specific technologies
+        grouped_market_shares = market_shares.groupby(market_shares.index).sum()
+
+        considered_technologies_in_market = []
+        for technology in grouped_market_shares.index:
+            if (
+                technology in DIRTY_TRACE_AGGREGATION.values()
+            ):  # fossile technologies form climate traxe
+                ef = self.calculate_technology_emission_factor(ProductIRI(technology))
+                emission_factors.append(ef)
+                considered_technologies_in_market.append(technology)
+            elif technology in DIRTY_BONSAI_PRODUCT_IRIS_MAPPING.values():
+                ef = self.get_bonsai_emission_factor(technology)
+                if ef is None:
+                    continue
+                emission_factors.append(ef)
+                considered_technologies_in_market.append(technology)
+            else:
+                warnings.warn(f"No emission factor available for {technology}.")
+
+        considered_market_shares = grouped_market_shares.loc[
+            considered_technologies_in_market
         ]
-        market_shares_removed_na.index = market_shares_removed_na.index.map(DIRTY_FIX)
-        market_shares_removed_na_normalized = (
-            market_shares_removed_na / market_shares_removed_na.sum()
+        considered_market_shares_normalized = (
+            considered_market_shares / considered_market_shares.sum()
         )
-        for technology in market_shares_removed_na_normalized.index:
-            ef = self.calculate_technology_emission_factor(ProductIRI(technology))
-            emission_factors.append(ef)
-        logger.debug(f"Market shares: {market_shares_removed_na_normalized}")
+
+        logger.debug(f"Market shares: {considered_market_shares_normalized}")
         logger.debug(f"Emission factors: {emission_factors}")
         return self.demand.amount * sum(
-            market_shares_removed_na_normalized * emission_factors
+            considered_market_shares_normalized * emission_factors
         )
+
+    def get_bonsai_emission_factor(self, product_iri: ProductIRI) -> float:
+        datasets = list(
+            Dataset.select().where(
+                (Dataset.product == product_iri)
+                & (Dataset.location == self.demand.spatial_context)
+            )
+        )
+        if len(datasets) == 0:
+            return None
+        if len(datasets) == 1:
+            dataframe = datasets[0].dataframe
+            total_emissions = sum(
+                dataframe["https://example.com/direct_CO2_emissions"],
+                dataframe["https://example.com/indirect_CO2_emissions"],
+            )
+        else:
+            merged_df = self.merge_datasets_to_dataframes(datasets)
+            total_emissions = sum(
+                merged_df["https://example.com/direct_CO2_emissions"].mean(),
+                merged_df["https://example.com/indirect_CO2_emissions"].mean(),
+            )
+
+        logger.debug(f"{product_iri}: {total_emissions} kgCO2eq/kWh")
+        return float(total_emissions)
 
     def calculate_technology_emission_factor(self, product_iri: ProductIRI) -> float:
         demand = Demand(
