@@ -9,7 +9,7 @@ __all__ = (
     "filter_timespan",
 )
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 from sentier_peakachu.data import create_local_electricity_datastorage
 from sentier_peakachu.model import ElectricityMixModel, ElectricitySourceModel
