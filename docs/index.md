@@ -6,6 +6,7 @@
 {octicon}`light-bulb;1em` sentier_peakachu is a specialized package of the Brightway Software Framework
 ```
 ## Overview
+![alt text](picture.jpg)
 
 The Sentier Peakachu package is designed to calculate the carbon footprint of electricity production, focusing on 1 kWh of electricity produced from a specific energy mix or technology at a particular region and time. This functionality enables users to quantify the emissions impact of electricity generation under various scenarios, providing insights into the environmental performance of different power generation methods.
 The package draws from two key data sources:
@@ -35,7 +36,45 @@ Future Enhancements
 
 Sentier Peakachu is part of the Brightway Software Framework, a widely-used platform for Life Cycle Assessment (LCA). Planned future updates will include extended support for global electricity datasets, improved integration with existing LCA tools, and more sophisticated algorithms for analyzing the environmental performance of electricity production.
 
-![alt text](picture.jpg)
+
+
+## hierarchy of ontology
+```mermaid
+graph LR
+A(Electrical energy) --> B(Fossil fuel-based electrical energy)
+A(Electrical energy) --> C(Renewable electrical energy)
+A(Electrical energy) --> D(Nuclear-based electrical energy)
+A(Electrical energy) --> E(Waste-based electrical energy)
+A(Electrical energy) --> F(Other electrical energy sources)
+```
+
+```mermaid
+graph LR
+A(Fossil fuel-based electrical energy) --> B(Fossil oil-based electrical energy)
+B(Fossil oil-based electrical energy) --> F(Electrical energy from crude oil)
+B(Fossil oil-based electrical energy) --> G(Electrical energy from oil shale)
+A(Fossil fuel-based electrical energy) --> C(Natural gas-based electrical energy)
+C(Natural gas-based electrical energy) --> H(Electrical energy from natural gas)
+C(Natural gas-based electrical energy) --> I(Electrical energy from coal seam gas)
+A(Fossil fuel-based electrical energy) --> D(Coal-based electrical energy)
+D(Coal-based electrical energy) --> J(Electrical energy from hard coal)
+D(Coal-based electrical energy) --> K(Electrical energy from brown coal/lignite)
+A(Fossil fuel-based electrical energy) --> E(Electrical energy from peat)
+```
+
+```mermaid
+graph LR
+A(Renewable electrical energy) --> B(Electricity from wind energy)
+B(Electricity from wind energy) --> E(Electricity from offshore wind energy)
+B(Electricity from wind energy) --> F(Electricity from onshore wind energy)
+A(Renewable electrical energy) --> C(Electricity from hydropower)
+C(Electricity from hydropower) --> G(Electrical energy from hydro water reservoirs)
+C(Electricity from hydropower) --> H(Electrical energy from pumped storage hydro)
+C(Electricity from hydropower) --> I(Electrical energy from run-of-river and poundage hydro)
+C(Electricity from hydropower) --> J(Electrical energy from marine sources)
+A(Renewable electrical energy) --> D(Solar-based electrical energy)
+```
+
 
 
 ```{toctree}
