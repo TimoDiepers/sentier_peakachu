@@ -31,6 +31,10 @@ class BottomModel(SentierModel):
 
 
 class ElectricitySourceModel(BottomModel):
+    """
+    Model to calculate the average emission factor of a specific electricity generating technology.
+    """
+
     provides = {
         ProductIRI("https://example.com/pv"): "pv",
         ProductIRI("https://example.com/coa"): "coal",
@@ -79,6 +83,10 @@ class ElectricitySourceModel(BottomModel):
 
 
 class ElectricityMixModel(TopModel):
+    """
+    Model to calculate the the emission factor for location and time.
+    """
+
     provides = {
         ProductIRI(
             "http://openenergy-platform.org/ontology/oeo/OEO_00000139"
