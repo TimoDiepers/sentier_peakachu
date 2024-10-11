@@ -39,7 +39,7 @@ Sentier Peakachu is part of the Brightway Software Framework, a widely-used plat
 
 
 ## hierarchy of ontology
-```mermaid
+```{mermaid}
 graph LR
 A(Electrical energy) --> B(Fossil fuel-based electrical energy)
 A(Electrical energy) --> C(Renewable electrical energy)
@@ -48,7 +48,7 @@ A(Electrical energy) --> E(Waste-based electrical energy)
 A(Electrical energy) --> F(Other electrical energy sources)
 ```
 
-```mermaid
+```{mermaid}
 graph LR
 A(Fossil fuel-based electrical energy) --> B(Fossil oil-based electrical energy)
 B(Fossil oil-based electrical energy) --> F(Electrical energy from crude oil)
@@ -62,7 +62,7 @@ D(Coal-based electrical energy) --> K(Electrical energy from brown coal/lignite)
 A(Fossil fuel-based electrical energy) --> E(Electrical energy from peat)
 ```
 
-```mermaid
+```{mermaid}
 graph LR
 A(Renewable electrical energy) --> B(Electricity from wind energy)
 B(Electricity from wind energy) --> E(Electricity from offshore wind energy)
