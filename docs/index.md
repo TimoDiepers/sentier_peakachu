@@ -18,10 +18,11 @@ The package draws from two key data sources:
 The primary goal of the sentier_peakachu package is to merge detailed emissions data with real-world energy mix information to create region-time-specific datasets. These datasets reflect the carbon emissions associated with either specific electricity production technologies (such as wind or coal) or a combination of technologies within a given mix at a particular location and time.
 By enabling users to model these scenarios, the package supports:
 
-Detailed Carbon Footprint Analysis: Accurate calculation of the CO₂ emissions per kWh of electricity, considering the specific mix of energy sources in a given area.
-Technology-Specific Emission Insights: The ability to isolate emissions for individual power generation technologies and compare their environmental impact.
-Regional and Temporal Flexibility: The package accounts for local conditions and the availability of renewable and non-renewable technologies, making the results relevant for policy-makers, researchers, and companies aiming to reduce emissions.
-Practical Applications
+* Detailed Carbon Footprint Analysis: Accurate calculation of the CO₂ emissions per kWh of electricity, considering the specific mix of energy sources in a given area.
+* Technology-Specific Emission Insights: The ability to isolate emissions for individual power generation technologies and compare their environmental impact.
+* Regional and Temporal Flexibility: The package accounts for local conditions and the availability of renewable and non-renewable technologies, making the results relevant for policy-makers, researchers, and companies aiming to reduce emissions.
+
+## Practical Applications
 
 This tool can be applied in various fields, such as:
 
@@ -36,7 +37,7 @@ Sentier Peakachu is part of the Brightway Software Framework, a widely-used plat
 
 
 
-## hierarchy of ontology
+## Hierarchy of Ontology
 ```{mermaid}
 graph LR
 A(Electrical energy) --> B(Fossil fuel-based electrical energy)
