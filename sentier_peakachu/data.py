@@ -4,7 +4,11 @@ from datetime import datetime
 import pandas as pd
 import sentier_data_tools as sdt
 
-from sentier_peakachu.entsoe import get_generation_data
+from sentier_peakachu.entsoe import (
+    get_generation_data,
+    entsoe_product_iris_mapping,
+    trace_product_iris_mapping,
+)
 from sentier_peakachu.utils_location import get_geonames_iri_from_iso_code
 
 
@@ -14,7 +18,6 @@ def create_local_electricity_datastorage(reset: bool = True):
     start_time = pd.Timestamp("20221008", tz="Europe/Brussels")
     end_time = pd.Timestamp("20221009", tz="Europe/Brussels")
     create_country_mix_dataset("DE", start_time, end_time)
-    create_country_mix_dataset("PL", start_time, end_time)
 
     create_plant_emission_datasets()
     create_bonsai_emission_factor_datasets()
@@ -27,6 +30,8 @@ def get_electricity_iri(source_type):
 def create_country_mix_dataset(
     country_code: str, start_time: pd.Timestamp, end_time: pd.Timestamp
 ):
+    # DF1
+
     metadata = sdt.Datapackage(
         name="electricity_markets",
         description="Electricity markets data from ENTSO-E",
@@ -46,18 +51,23 @@ def create_country_mix_dataset(
         end=end_time,
     )
     df.index.name = "timestamp"
-    df = df[["Fossil Brown coal/Lignite", "Fossil Gas"]].reset_index()
-    df.columns = [
-        "https://example.com/timestamp",
-        "https://example.com/coa",
-        "https://example.com/gas",
+
+    df = df.rename(columns=entsoe_product_iris_mapping)
+
+    df = df.reset_index()
+
+    df = df.rename(
+        columns={"timestamp": "https://vocab.sentier.dev/units/quantity-kind/Time"}
+    )
+
+    units_tech = ["https://vocab.sentier.dev/units/unit/MegaW-HR"] * len(
+        entsoe_product_iris_mapping
+    )  # MW not Mwh but no entry in SKOSMOS
+    units_time = [
+        "https://vocab.sentier.dev/units/unit/SEC",
     ]
 
-    UNITS = [
-        "https://example.com/units/datetime",
-        "https://example.com/units/MW",
-        "https://example.com/units/MW",
-    ]
+    UNITS = units_time + units_tech
 
     sdt.Dataset(
         name="electricity mixes",
@@ -80,34 +90,30 @@ def create_plant_emission_datasets():
         description="Climate trace emission data for power plants",
         contributors=[
             {
-                "title": "Karin Treyer",
-                "path": "https://www.psi.ch/en/ta/people/karin-treyer",
+                "title": "Peakachu",
+                "path": "https://github.com/TimoDiepers/sentier_peakachu/",
                 "role": "author",
             },
-            {
-                "title": "Chris Mutel",
-                "path": "https://chris.mutel.org/",
-                "role": "wrangler",
-            },
         ],
-        homepage="https://example.com/additional_inventories",
+        homepage="https://github.com/TimoDiepers/sentier_peakachu/",
     ).metadata()
 
-    UNITS_POWERPLANTS = [
-        "https://example.com/units/datetime",
-        "https://example.com/units/datetime",
-        "https://example.com/units/plant_name",
-        "https://example.com/units/MWh",
-        "https://example.com/units/ttCO2eq",
-        "https://example.com/units/tCO2eqPerMWh",
-    ]
     COLUMNS_POWERPLANTS = [
-        "https://example.com/identifier",
-        "https://example.com/name",
-        "https://example.com/units/start_time",
-        "https://example.com/units/end_time",
-        "https://example.com/powergeneration",
-        "https://example.com/emissions",
+        "https://example.com/model-terms/identifier",  # to be added to SKOSMOS model terms
+        "https://example.com/model-terms/name",  # to be added to SKOSMOS model terms
+        "https://example.com/model-terms/start_time",  # to be added to SKOSMOS model terms
+        "https://example.com/model-terms/end_time",  # to be added to SKOSMOS model terms
+        "https://example.com/process-terms/powergeneration",  # to be added to SKOSMOS process terms
+        "http://openenergy-platform.org/ontology/oeo/OEO_00260007",  # CO2 emission
+    ]
+
+    UNITS_POWERPLANTS = [
+        "https://example.com/model-terms/integer",  # to be added to SKOSMOS model terms
+        "https://example.com/model-terms/name",  # to be added to SKOSMOS model terms
+        "https://vocab.sentier.dev/units/unit/SEC",
+        "https://vocab.sentier.dev/units/unit/SEC",
+        "https://vocab.sentier.dev/units/unit/MegaW-HR",
+        "https://vocab.sentier.dev/units/unit/TON_Metric",
     ]
 
     trace_frame = pd.read_csv("../data/electricity-generation_emissions_sources.csv")
@@ -119,6 +125,12 @@ def create_plant_emission_datasets():
     }
 
     for (country, source_type), df in grouped_dfs.items():
+        if source_type not in trace_product_iris_mapping.keys():
+            warnings.warn(
+                f"Source type {source_type} not found, skipping Dataset creation"
+            )
+            continue
+
         geonames_iri = get_geonames_iri_from_iso_code(country)
         if not geonames_iri:
             warnings.warn(
@@ -143,7 +155,7 @@ def create_plant_emission_datasets():
             name=f"power plant data, {country}, {source_type}",
             dataframe=filtered_df,
             kind=sdt.DatasetKind.BOM,
-            product=get_electricity_iri(source_type),
+            product=trace_product_iris_mapping[source_type],
             columns=[
                 {"iri": x, "unit": y} for x, y in zip(df.columns, UNITS_POWERPLANTS)
             ],
@@ -153,6 +165,7 @@ def create_plant_emission_datasets():
             valid_from=datetime.strptime(valid_from_str, "%Y-%m-%d %H:%M:%S"),
             valid_to=datetime.strptime(valid_to_str, "%Y-%m-%d %H:%M:%S"),
         ).save()
+
 
 def create_bonsai_emission_factor_datasets():
     """
