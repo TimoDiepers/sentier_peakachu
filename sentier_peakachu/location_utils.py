@@ -1,6 +1,5 @@
 import polars as pl
 import pandas as pd
-import networkx as nx
 
 class LocationUtility():
 
@@ -9,7 +8,6 @@ class LocationUtility():
         self.iso_iri_table = "../../data/Location-Services/iso_iri_table.csv"
         self.hierarchy_table = "../../data/Location-Services/hierarchy.txt"
         self.lookup_separator = "\t"
-        self.hierarchy_graph = nx.DiGraph()
 
     def IRI_Lookup(self, code: str) -> str:
         geonameid = self.geonameid_Lookup(code)
@@ -25,12 +23,4 @@ class LocationUtility():
             raise ValueError('Please use a two or three digit ISO code')
 
         return id
-    
-    def build_graph(self):
-        df = pd.read_csv("../../data/Location-Services/hierarchy.txt",sep="\t",header=0)
-        df.columns = ['parent','child','type']
-        for index, row in df.iterrows():
-            self.hierarchy_graph.add_edge(row['parent'], row['child'])
-        
-    def get_graph_children(self, geonameid:int) -> list[tuple[str,int]]:
         
