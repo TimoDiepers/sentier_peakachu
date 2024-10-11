@@ -104,6 +104,8 @@ myst_enable_extensions = [
 ## autoapi configuration ################################################
 ## https://sphinx-autoapi.readthedocs.io/en/latest/reference/config.html#customisation-options
 
+source_suffix = {".rst": "restructuredtext", ".md": "myst-nb", ".ipynb": "myst-nb"}
+
 autoapi_options = [
     'members',
     'undoc-members',
